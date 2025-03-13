@@ -1,17 +1,20 @@
-# Welcome to MkDocs
+Le but de ce site est de condenser mes notes, notamment dans le domaine de la cybersécurité. Il s'agit d'un projet que je maintiens sur mon temps libre, n'étant qu'un simple humain, des erreurs ou approximations peuvent se glisser ici et là. N'hésitez pas à me les communiquer !
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+---
+### Certifications
 
-## Commands
+![](Files/Pasted%20image%2020241111023819.png)
+![Pasted image 20240106225346](Files/Pasted%20image%2020240106225346.png)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+![Pasted image 20231227125920](Files/Pasted%20image%2020231227125920.png)
 
-## Project layout
+![Pasted image 20231227125845](Files/Pasted%20image%2020231227125845.png)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+---
+### Prolabs
+
+![Pasted image 20240326133457](Files/Pasted%20image%2020240326133457.png)
+
+![Pasted image 20240326133531](Files/Pasted%20image%2020240326133531.png)
+
+![](Files/Pasted%20image%2020240915004222.png)
