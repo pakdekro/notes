@@ -38,5 +38,4 @@ extra:
   generator: false
 
 plugins:
-  - typeset:
-      enabled: false
+  - typeset
