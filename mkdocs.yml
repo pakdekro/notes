@@ -6,6 +6,8 @@ theme:
   features:
     - navigation.tabs
     - navigation.footer
+    - content.code.copy
+    - navigation.sections
   palette:
 
     # Palette toggle for light mode
@@ -27,6 +29,7 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+      linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
@@ -36,6 +39,3 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/alexandre-lavefve/
   generator: false
-
-plugins:
-  - material/typeset
