@@ -38,4 +38,4 @@ extra:
   generator: false
 
 plugins:
-  - typeset
+  - material/typeset
