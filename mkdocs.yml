@@ -1,4 +1,3 @@
 site_name: paks3c
 theme:
   name: material
-  custom_dir: overrides
