@@ -33,6 +33,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - markdown.extensions.nl2br
 
 extra:
   social:
