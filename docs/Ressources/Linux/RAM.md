@@ -1,3 +1,8 @@
+---
+tags:
+  - RAM
+  - Système/Linux
+---
 **1. Introduction**
 
 Comme sous Windows, la Mémoire Vive (RAM) sous Linux sert de stockage rapide et volatile pour les processus en cours et leurs données. Le noyau Linux possède un sous-système de gestion de la mémoire (Memory Management - MM) sophistiqué dont les objectifs principaux sont l'efficacité, la rapidité, et la capacité à supporter une grande variété de charges de travail, tout en maximisant l'utilisation de la précieuse RAM physique. Une caractéristique distinctive de Linux est son utilisation agressive de la RAM libre pour le cache disque (Page Cache).
@@ -89,5 +94,3 @@ Les considérations de sécurité sont globalement similaires à celles de Windo
 **6. Conclusion**
 
 La gestion de la mémoire sous Linux est optimisée pour la performance, notamment grâce à son utilisation extensive du Page Cache qui transforme la RAM "inutilisée" en un cache disque très efficace. Des mécanismes comme le Buddy Allocator, le Slab Allocator, la pagination à la demande et le Copy-on-Write contribuent à une utilisation efficiente des ressources. Comprendre ces concepts, et notamment le rôle central du Page Cache et la signification des métriques fournies par les outils de surveillance, est indispensable pour administrer, dépanner et sécuriser correctement un système Linux.
-
-#RAM #Système/Linux #Explications
