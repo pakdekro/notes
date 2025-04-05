@@ -49,4 +49,4 @@ extra:
   
 plugins:
   - search # Ajouté
-  - mkdocs-git-revision-date-localized-plugin
+
