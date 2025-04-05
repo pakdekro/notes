@@ -1,5 +1,3 @@
-# Rubeus Cheatsheet (Améliorée et Complétée)
-
 **Objectif :** Rubeus est un outil C# essentiel pour interagir avec Kerberos au sein d'un environnement Active Directory. Il permet de demander, manipuler, et abuser des tickets Kerberos pour diverses techniques offensives (AS-REP Roasting, Kerberoasting, Pass-The-Ticket, S4U, etc.).
 
 **Source :** [https://github.com/GhostPack/Rubeus](https://github.com/GhostPack/Rubeus)

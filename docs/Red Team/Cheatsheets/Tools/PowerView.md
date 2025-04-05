@@ -1,5 +1,3 @@
-# PowerView Cheatsheet (Améliorée et Complétée)
-
 **Objectif :** PowerView est un module PowerShell faisant partie de la suite PowerSploit. Il est spécialisé dans l'énumération et l'exploitation d'environnements Active Directory (AD). Il permet de cartographier le domaine, trouver des utilisateurs, groupes, ordinateurs, GPOs, ACLs, et identifier des chemins potentiels d'escalade de privilèges ou de mouvement latéral.
 
 **Source :** [https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)

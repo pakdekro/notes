@@ -1,5 +1,3 @@
-# SQLMap Cheatsheet (Améliorée et Complétée)
-
 **Objectif :** SQLMap est un outil open-source d'audit de sécurité et de test de pénétration qui automatise le processus de détection et d'exploitation des vulnérabilités d'injection SQL, permettant ainsi de prendre le contrôle des serveurs de bases de données.
 
 **Source :** [https://github.com/sqlmapproject/sqlmap](https://github.com/sqlmapproject/sqlmap) | [http://sqlmap.org/](http://sqlmap.org/)
