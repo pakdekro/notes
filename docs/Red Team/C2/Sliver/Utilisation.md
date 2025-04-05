@@ -1,4 +1,3 @@
-# Sliver C2 - Cheatsheet d'Utilisation
 
 **Objectif :** Sliver est un framework de Command & Control (C2) moderne, multiplateforme (écrit en Go), conçu pour les opérations Red Team et les tests d'intrusion, avec un accent sur la sécurité opérationnelle (OPSEC) et la flexibilité.
 
