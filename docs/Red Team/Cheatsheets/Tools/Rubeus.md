@@ -96,7 +96,7 @@ Rubeus.exe asreproast /user: /domain:<domain.fqdn> /format:hashcat /outfile:<has
 Rubeus.exe ptt /ticket:<base64_ticket> [/luid:<logon_id>]
 ```
 
-* **Contexte :** Injecte un ticket Kerberos existant (TGT ou TGS, souvent au format `.kirbi` encodé en Base64) dans la mémoire de la session courante ou une autre session spécifiée.
+* **Contexte :** Injecte un ticket [Kerberos](../../../Ressources/Windows/Kerberos.md) existant (TGT ou TGS, souvent au format `.kirbi` encodé en Base64) dans la mémoire de la session courante ou une autre session spécifiée.
 * **Usage :** Permet d'usurper l'identité associée au ticket pour accéder aux ressources sans connaître le mot de passe du compte. Très utile pour le mouvement latéral après avoir extrait des tickets (ex: via `dump` sur une autre machine ou `mimikatz`).
 * **Options clés :**
     * `/ticket:` : Le ticket [Kerberos](../../../Ressources/Windows/Kerberos.md) (TGT ou TGS) encodé en Base64.
@@ -124,7 +124,7 @@ Rubeus.exe renew /ticket:<base64_tgt> [/ptt]
 Rubeus.exe monitor [/interval:<seconds>] [/filteruser:<user_sid>] [/targetuser:<user_sid>]
 ```
 
-* **Contexte :** Écoute et affiche les événements liés aux tickets Kerberos (création, renouvellement, etc.) qui se produisent dans la session de connexion actuelle ou pour un utilisateur cible si les privilèges le permettent.
+* **Contexte :** Écoute et affiche les événements liés aux tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) (création, renouvellement, etc.) qui se produisent dans la session de connexion actuelle ou pour un utilisateur cible si les privilèges le permettent.
 * **Usage :** Utile pour la reconnaissance dynamique, comprendre les flux d'authentification ou capturer des tickets au moment de leur création (par exemple, si un admin se connecte).
 * **Options clés :**
     * `/interval:` : Intervalle (en secondes) entre chaque vérification des événements (défaut: 60).
