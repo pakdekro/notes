@@ -1,7 +1,3 @@
-# NetExec Cheatsheet (Améliorée et Complétée)
-
-  
-
 **Objectif :** NetExec (anciennement CrackMapExec/CME) est un outil post-exploitation conçu pour évaluer la sécurité des grands réseaux Active Directory (et autres environnements). Il excelle dans l'énumération, la vérification d'identifiants (spraying), l'exécution de commandes et l'extraction de secrets sur de multiples hôtes simultanément via divers protocoles (SMB, LDAP, WinRM, MSSQL, etc.).
 
   
