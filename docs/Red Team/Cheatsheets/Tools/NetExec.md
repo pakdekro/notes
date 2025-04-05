@@ -1,4 +1,4 @@
-**Objectif :** NetExec (anciennement CrackMapExec/CME) est un outil post-exploitation conçu pour évaluer la sécurité des grands réseaux Active Directory (et autres environnements). Il excelle dans l'énumération, la vérification d'identifiants (spraying), l'exécution de commandes et l'extraction de secrets sur de multiples hôtes simultanément via divers protocoles (SMB, LDAP, WinRM, MSSQL, etc.).
+**Objectif :** NetExec (anciennement CrackMapExec/CME) est un outil post-exploitation conçu pour évaluer la sécurité des grands réseaux Active Directory (et autres environnements). Il excelle dans l'énumération, la vérification d'identifiants (spraying), l'exécution de commandes et l'extraction de secrets sur de multiples hôtes simultanément via divers protocoles (SMB, LDAP, WinRM, [MSSQL](../Base%20de%20données/MSSQL.md), etc.).
 
   
 
@@ -10,7 +10,7 @@
 
   
 
-**Cibles :** Peut être une IP unique, une plage CIDR (192.168.1.0/24), un nom d'hôte, ou un fichier contenant une liste de cibles (`-t targets.txt`).
+**Cibles :** Peut être une IP unique, une plage [CIDR](../../../Misc/CIDR.md) (192.168.1.0/24), un nom d'hôte, ou un fichier contenant une liste de cibles (`-t targets.txt`).
 
   
 
@@ -77,9 +77,9 @@ netexec <proto> <cible> -k [--use-kcache] [-d <domaine>]
 
   
 
-* **Usage :** S'authentifie en utilisant un ticket Kerberos (TGT ou TGS) valide stocké dans un fichier cache (`.ccache`).
+* **Usage :** S'authentifie en utilisant un ticket [Kerberos](../../../Ressources/Windows/Kerberos.md) (TGT ou TGS) valide stocké dans un fichier cache (`.ccache`).
 
-* `-k` : Active l'authentification Kerberos.
+* `-k` : Active l'authentification [Kerberos](../../../Ressources/Windows/Kerberos.md).
 
 * `--use-kcache` : Indique explicitement d'utiliser le fichier défini par `KRB5CCNAME`.
 

