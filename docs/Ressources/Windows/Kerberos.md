@@ -42,7 +42,7 @@ Le processus se déroule typiquement en trois échanges majeurs :
         * La **Clé de Session TGS** et d'autres informations (durée de validité, nonce), le tout **chiffré avec la Clé Utilisateur**.
 5.  **Traitement par le Client :**
     * Le client utilise sa propre Clé Utilisateur (dérivée de son mot de passe) pour déchiffrer la deuxième partie de la réponse.
-    * Il récupère ainsi la **Clé de Session TGS** et stocke le **TGT** (qu'il ne peut pas lire) et la Clé de Session TGS dans son cache de tickets Kerberos (souvent géré par LSASS sous Windows).
+    * Il récupère ainsi la **Clé de Session TGS** et stocke le **TGT** (qu'il ne peut pas lire) et la Clé de Session TGS dans son cache de tickets Kerberos (souvent géré par [Lsass.exe](Lsass.exe.md) sous Windows).
     * *À ce stade, le client est authentifié auprès du KDC et possède un TGT et la clé de session associée.*
 
 **Étape 2 : TGS Exchange (Demande et Obtention du Ticket de Service)** - Messages `KRB_TGS_REQ` et `KRB_TGS_REP`
@@ -100,7 +100,7 @@ Le processus se déroule typiquement en trois échanges majeurs :
     * **Kerberoasting :** Un utilisateur authentifié peut demander des Tickets de Service (ST) pour n'importe quel service (SPN) du domaine. Si un compte de service (associé à un SPN) a un mot de passe faible, un attaquant peut demander un ST pour ce service. Le TGS renverra la partie chiffrée avec la clé du service (`KRB_TGS_REP`). L'attaquant peut alors tenter de cracker cette partie hors ligne par force brute pour retrouver le mot de passe du compte de service.
     * **Golden Ticket :** Si un attaquant compromet le compte `krbtgt` (qui possède la clé secrète du TGS), il peut forger des TGT valides pour n'importe quel utilisateur (même inexistant), avec n'importe quels privilèges (ex: Administrateur du Domaine), et pour une durée de validité très longue. C'est une attaque de persistance très puissante.
     * **Silver Ticket :** Si un attaquant compromet la clé secrète d'un compte de service spécifique (via Kerberoasting par exemple), il peut forger des Tickets de Service (ST) valides pour *ce service uniquement*, en usurpant l'identité de n'importe quel utilisateur.
-    * **Pass-the-Ticket (PtT) :** Si un attaquant récupère un TGT ou un ST valide depuis la mémoire d'une machine compromise (ex: via Mimikatz sur LSASS), il peut réutiliser ce ticket depuis une autre machine pour accéder aux ressources comme s'il était l'utilisateur légitime, sans connaître le mot de passe.
+    * **Pass-the-Ticket (PtT) :** Si un attaquant récupère un TGT ou un ST valide depuis la mémoire d'une machine compromise (ex: via Mimikatz sur [Lsass.exe](Lsass.exe.md)), il peut réutiliser ce ticket depuis une autre machine pour accéder aux ressources comme s'il était l'utilisateur légitime, sans connaître le mot de passe.
 
 **5. Kerberos et Active Directory**
 

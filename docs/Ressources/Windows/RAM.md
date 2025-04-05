@@ -76,7 +76,7 @@ Plusieurs outils permettent d'observer la gestion de la mémoire :
 
 La gestion de la mémoire est intimement liée à la sécurité :
 
-* **Forensique Mémoire (Memory Forensics) :** L'analyse d'un dump (copie) de la RAM d'une machine est une technique d'investigation numérique cruciale. La RAM contient l'état volatile du système : processus en cours, connexions réseau ouvertes, commandes tapées, clés de chiffrement, et parfois même des identifiants (cf. LSASS). Des outils comme Volatility permettent d'extraire ces informations.
+* **Forensique Mémoire (Memory Forensics) :** L'analyse d'un dump (copie) de la RAM d'une machine est une technique d'investigation numérique cruciale. La RAM contient l'état volatile du système : processus en cours, connexions réseau ouvertes, commandes tapées, clés de chiffrement, et parfois même des identifiants (cf. [Lsass.exe](Lsass.exe.md)). Des outils comme Volatility permettent d'extraire ces informations.
 * **Exploitation de Vulnérabilités :** De nombreuses vulnérabilités (dépassements de tampon, use-after-free, type confusion) exploitent la manière dont la mémoire est allouée, libérée et accédée par les processus. Comprendre la gestion de la mémoire est essentiel pour développer et comprendre ces exploits.
 * **Mécanismes de Défense :** Windows intègre des défenses au niveau de la gestion mémoire :
     * **ASLR (Address Space Layout Randomization) :** Rend aléatoire l'emplacement des zones mémoire clés (exécutables, DLLs, tas, pile) dans l'espace d'adressage virtuel, rendant plus difficile pour un attaquant de prédire les adresses à cibler dans un exploit.

