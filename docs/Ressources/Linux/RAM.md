@@ -1,8 +1,3 @@
----
-tags:
-  - RAM
-  - Système/Linux
----
 **1. Introduction**
 
 Comme sous Windows, la Mémoire Vive (RAM) sous Linux sert de stockage rapide et volatile pour les processus en cours et leurs données. Le noyau Linux possède un sous-système de gestion de la mémoire (Memory Management - MM) sophistiqué dont les objectifs principaux sont l'efficacité, la rapidité, et la capacité à supporter une grande variété de charges de travail, tout en maximisant l'utilisation de la précieuse RAM physique. Une caractéristique distinctive de Linux est son utilisation agressive de la RAM libre pour le cache disque (Page Cache).

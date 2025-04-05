@@ -1,8 +1,3 @@
----
-tags:
-  - RAM
-  - Système/Windows
----
 **1. Introduction**
 
 La Mémoire Vive (Random Access Memory - RAM) est une ressource matérielle essentielle, agissant comme un espace de stockage temporaire et rapide pour les instructions des programmes en cours d'exécution et les données qu'ils manipulent activement. Sa gestion efficace est cruciale pour la performance et la stabilité du système d'exploitation. Sous Windows, cette tâche complexe est orchestrée par un composant central du noyau appelé le **Gestionnaire de Mémoire (Memory Manager)**. Son rôle est d'allouer la mémoire aux processus, de gérer l'espace d'adressage virtuel, d'optimiser l'utilisation de la RAM physique limitée et de fournir des mécanismes de protection.
