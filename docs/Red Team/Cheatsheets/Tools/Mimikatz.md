@@ -1,4 +1,3 @@
-# Mimikatz Cheatsheet (Améliorée et Complétée)
 
 **Objectif :** Mimikatz est un outil post-exploitation incontournable pour Windows, spécialisé dans l'extraction d'identifiants (mots de passe en clair, hashes, tickets [Kerberos](../../../Ressources/Windows/Kerberos.md), secrets DPAPI, etc.) de la mémoire, du registre ou du système de fichiers. Il permet également de manipuler les tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) (Golden/Silver Tickets) et d'interagir avec Active Directory (DCSync, DCShadow).
 
