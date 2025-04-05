@@ -1,4 +1,3 @@
-# Cheatsheet Audit de Code PHP
 
 **Objectif :** Identifier rapidement les points potentiellement vulnérables dans une base de code PHP lors d'un audit de sécurité statique (SAST - Static Application Security Testing). Cette cheatsheet se concentre sur des fonctions et des patterns connus pour être souvent sources de vulnérabilités.
 
