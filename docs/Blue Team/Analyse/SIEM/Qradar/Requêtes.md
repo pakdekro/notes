@@ -150,4 +150,3 @@ GROUP BY eventName
 ORDER BY occurrences DESC
 ```
 
-Liste les **événements les plus fréquents**.
