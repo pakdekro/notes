@@ -1,4 +1,7 @@
 site_name: paks3c
+site_url: https://paks3c.fr/ # URL finale de votre site
+site_description: "Notes personnelles et cheatsheets sur la cybersécurité et l'IT." # Adaptez selon votre contenu
+site_author: "Alexandre Lavefve" # Votre nom
 theme:
   name: material
   language: fr
@@ -8,6 +11,7 @@ theme:
     - navigation.footer
     - content.code.copy
     - navigation.sections
+    - navigation.top
   palette:
 
     # Palette toggle for light mode
@@ -34,9 +38,15 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - markdown.extensions.nl2br
+  - pymdownx.tabbed: # Permet de créer des onglets de contenu
+      alternate_style: true
 
 extra:
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/alexandre-lavefve/
   generator: false
+  
+plugins:
+  - search # Ajouté
+  - mkdocs-git-revision-date-localized-plugin
