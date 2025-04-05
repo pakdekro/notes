@@ -1,4 +1,4 @@
-**Objectif :** Rubeus est un outil C# essentiel pour interagir avec Kerberos au sein d'un environnement Active Directory. Il permet de demander, manipuler, et abuser des tickets Kerberos pour diverses techniques offensives (AS-REP Roasting, Kerberoasting, Pass-The-Ticket, S4U, etc.).
+**Objectif :** Rubeus est un outil C# essentiel pour interagir avec [Kerberos](../../../Ressources/Windows/Kerberos.md) au sein d'un environnement Active Directory. Il permet de demander, manipuler, et abuser des tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) pour diverses techniques offensives (AS-REP Roasting, Kerberoasting, Pass-The-Ticket, S4U, etc.).
 
 **Source :** [https://github.com/GhostPack/Rubeus](https://github.com/GhostPack/Rubeus)
 
@@ -10,7 +10,7 @@
 Rubeus.exe dump
 ```
 
-* **Contexte :** Permet de visualiser les tickets Kerberos (TGT et TGS) actuellement mis en cache dans la session utilisateur courante.
+* **Contexte :** Permet de visualiser les tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) (TGT et TGS) actuellement mis en cache dans la session utilisateur courante.
 * **Usage :** Utile pour la reconnaissance (voir quels services l'utilisateur a récemment accédés) ou pour extraire des tickets en vue d'une attaque Pass-The-Ticket (PTT).
 * **Astuce :** Exécuter avec des privilèges élevés peut révéler les tickets d'autres sessions utilisateurs sur la machine.
 
@@ -25,7 +25,7 @@ Rubeus.exe asktgt /user:<username> /rc4:<ntlm_hash> /domain:<domain.fqdn> [/ptt]
 Rubeus.exe asktgt /user:<username> /aes256:<aes_key> /domain:<domain.fqdn> [/ptt]
 ```
 
-* **Contexte :** Obtient un TGT pour un utilisateur spécifique si vous disposez de son mot de passe en clair ou de son hash/clé Kerberos. Le TGT est la première étape de l'authentification Kerberos, prouvant l'identité de l'utilisateur auprès du KDC (Key Distribution Center).
+* **Contexte :** Obtient un TGT pour un utilisateur spécifique si vous disposez de son mot de passe en clair ou de son hash/clé [Kerberos](../../../Ressources/Windows/Kerberos.md). Le TGT est la première étape de l'authentification [Kerberos](../../../Ressources/Windows/Kerberos.md), prouvant l'identité de l'utilisateur auprès du KDC (Key Distribution Center).
 * **Usage :** Valider des identifiants, obtenir un TGT initial pour demander ensuite des TGS, ou pour une attaque Pass-The-Ticket.
 * **Options clés :**
     * `/user`, `/password` | `/rc4` | `/aes256`, `/domain` : Identifiants nécessaires.
@@ -99,7 +99,7 @@ Rubeus.exe ptt /ticket:<base64_ticket> [/luid:<logon_id>]
 * **Contexte :** Injecte un ticket Kerberos existant (TGT ou TGS, souvent au format `.kirbi` encodé en Base64) dans la mémoire de la session courante ou une autre session spécifiée.
 * **Usage :** Permet d'usurper l'identité associée au ticket pour accéder aux ressources sans connaître le mot de passe du compte. Très utile pour le mouvement latéral après avoir extrait des tickets (ex: via `dump` sur une autre machine ou `mimikatz`).
 * **Options clés :**
-    * `/ticket:` : Le ticket Kerberos (TGT ou TGS) encodé en Base64.
+    * `/ticket:` : Le ticket [Kerberos](../../../Ressources/Windows/Kerberos.md) (TGT ou TGS) encodé en Base64.
     * `/luid:` : (Optionnel) L'ID de session cible pour l'injection (utile si on a les privilèges pour injecter dans la session d'un autre utilisateur).
 
 ---
@@ -139,7 +139,7 @@ Rubeus.exe monitor [/interval:<seconds>] [/filteruser:<user_sid>] [/targetuser:<
 Rubeus.exe purge [/luid:<logon_id>]
 ```
 
-* **Contexte :** Supprime tous les tickets Kerberos de la session courante ou d'une session spécifiée.
+* **Contexte :** Supprime tous les tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) de la session courante ou d'une session spécifiée.
 * **Usage :** Nettoyer les tickets après une opération, forcer une nouvelle authentification, ou effacer les traces d'un ticket injecté via PTT.
 * **Options clés :**
     * `/luid:` : (Optionnel) L'ID de la session dont les tickets doivent être purgés.
@@ -152,10 +152,10 @@ Rubeus.exe purge [/luid:<logon_id>]
 Rubeus.exe describe /ticket:<base64_ticket>
 ```
 
-* **Contexte :** Décode et affiche les informations contenues dans un ticket Kerberos (encodé en Base64).
+* **Contexte :** Décode et affiche les informations contenues dans un ticket [Kerberos](../../../Ressources/Windows/Kerberos.md) (encodé en Base64).
 * **Usage :** Analyser un ticket pour connaître l'utilisateur, le service cible, la durée de validité, les flags, etc.
 * **Options clés :**
-    * `/ticket:` : Le ticket Kerberos (TGT ou TGS) encodé en Base64.
+    * `/ticket:` : Le ticket [Kerberos](../../../Ressources/Windows/Kerberos.md) (TGT ou TGS) encodé en Base64.
 
 ---
 
@@ -165,7 +165,7 @@ Rubeus.exe describe /ticket:<base64_ticket>
 Rubeus.exe hash /password:<password> [/user:<username>] [/domain:<domain>]
 ```
 
-* **Contexte :** Calcule les différents hashes et clés Kerberos (NTLM, RC4_HMAC, AES128, AES256) à partir d'un mot de passe en clair.
+* **Contexte :** Calcule les différents hashes et clés [Kerberos](../../../Ressources/Windows/Kerberos.md) (NTLM, RC4_HMAC, AES128, AES256) à partir d'un mot de passe en clair.
 * **Usage :** Utile pour obtenir les clés nécessaires à certaines attaques (comme `asktgt` avec `/aes256`) si vous avez le mot de passe mais pas les clés/hashes directement.
 * **Options clés :**
     * `/password:` : Le mot de passe à hacher.
@@ -201,7 +201,7 @@ Rubeus.exe s4u /user:SVC_RUBEUS$ /aes256:xxx /impersonateuser:Administrator /msd
 Rubeus.exe createnetonly /program:<chemin_executable> [/show]
 ```
 
-* **Contexte :** Lance un processus (ex: `cmd.exe`, `powershell.exe`) avec des informations d'identification réseau "vides". Cela crée une nouvelle session de connexion (Logon Session) qui n'a pas de tickets Kerberos locaux.
+* **Contexte :** Lance un processus (ex: `cmd.exe`, `powershell.exe`) avec des informations d'identification réseau "vides". Cela crée une nouvelle session de connexion (Logon Session) qui n'a pas de tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) locaux.
 * **Usage :** Très utile pour utiliser des tickets injectés via PTT dans un contexte propre, sans interférence des tickets de votre session utilisateur actuelle. Après avoir lancé `createnetonly`, vous pouvez utiliser `Rubeus.exe ptt /luid:<nouvel_id_session> /ticket:<base64_ticket>` pour injecter un ticket spécifiquement dans cette nouvelle session.
 * **Options clés :**
     * `/program:` : Le programme à lancer (ex: `C:\Windows\System32\cmd.exe`).

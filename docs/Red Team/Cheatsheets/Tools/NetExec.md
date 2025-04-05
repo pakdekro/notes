@@ -83,7 +83,7 @@ netexec <proto> <cible> -k [--use-kcache] [-d <domaine>]
 
 * `--use-kcache` : Indique explicitement d'utiliser le fichier défini par `KRB5CCNAME`.
 
-* **Prérequis :** Un ticket Kerberos valide pour un utilisateur du domaine cible.
+* **Prérequis :** Un ticket [Kerberos](../../../Ressources/Windows/Kerberos.md) valide pour un utilisateur du domaine cible.
 
   
 

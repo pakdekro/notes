@@ -35,7 +35,7 @@ privilege::debug
 sekurlsa::logonpasswords
 ```
 
-* **Contexte :** Tente d'extraire les identifiants (mots de passe en clair si WDigest est activé ou si des sessions RDP récentes existent, hashes NTLM, tickets Kerberos) des sessions utilisateurs actuellement connectées et stockées en mémoire par LSASS.
+* **Contexte :** Tente d'extraire les identifiants (mots de passe en clair si WDigest est activé ou si des sessions RDP récentes existent, hashes NTLM, tickets [Kerberos](../../../Ressources/Windows/Kerberos.md)) des sessions utilisateurs actuellement connectées et stockées en mémoire par LSASS.
 * **Usage :** Commande principale pour la récolte d'identifiants sur une machine compromise.
 
 #### Extraire les identifiants WDigest
@@ -53,7 +53,7 @@ sekurlsa::wdigest
 sekurlsa::kerberos
 ```
 
-* **Contexte :** Extrait les tickets Kerberos (TGT, TGS) et les clés associées (RC4, AES) de la mémoire LSASS.
+* **Contexte :** Extrait les tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) (TGT, TGS) et les clés associées (RC4, AES) de la mémoire LSASS.
 * **Usage :** Permet de récupérer des tickets pour des attaques Pass-The-Ticket (PTT) ou Pass-The-Key.
 
 #### Extraire les clés de chiffrement Kerberos (eKeys)
@@ -62,7 +62,7 @@ sekurlsa::kerberos
 sekurlsa::ekeys
 ```
 
-* **Contexte :** Liste les clés de session Kerberos (AES, DES, RC4) stockées en mémoire.
+* **Contexte :** Liste les clés de session [Kerberos](../../../Ressources/Windows/Kerberos.md) (AES, DES, RC4) stockées en mémoire.
 * **Usage :** Principalement pour l'analyse ou des attaques Pass-The-Key spécifiques.
 
 #### Extraire les identifiants SSP (Security Support Provider)
@@ -99,7 +99,7 @@ sekurlsa::krbtgt
 sekurlsa::tickets [/export]
 ```
 
-* **Contexte :** Similaire à `sekurlsa::kerberos`, mais se concentre sur l'affichage et l'exportation des tickets Kerberos.
+* **Contexte :** Similaire à `sekurlsa::kerberos`, mais se concentre sur l'affichage et l'exportation des tickets [Kerberos](../../../Ressources/Windows/Kerberos.md).
 * **Usage :** Récupérer des tickets pour une analyse hors ligne ou pour les réutiliser avec `/export` (génère des fichiers `.kirbi`).
 
 #### Attaque Pass-The-Hash (PtH)
@@ -167,7 +167,7 @@ kerberos::golden /user:<username> /domain:<domain.fqdn> /sid:<domain_sid> /targe
 kerberos::list [/export]
 ```
 
-* **Contexte :** Affiche les tickets Kerberos présents dans la session utilisateur actuelle.
+* **Contexte :** Affiche les tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) présents dans la session utilisateur actuelle.
 * **Usage :** Similaire à `sekurlsa::tickets` mais via le module `kerberos`. `/export` sauvegarde les tickets en fichiers `.kirbi`.
 
 #### Purger les tickets Kerberos de la session
@@ -176,7 +176,7 @@ kerberos::list [/export]
 kerberos::purge
 ```
 
-* **Contexte :** Supprime tous les tickets Kerberos de la session utilisateur actuelle.
+* **Contexte :** Supprime tous les tickets [Kerberos](../../../Ressources/Windows/Kerberos.md) de la session utilisateur actuelle.
 * **Usage :** Utile pour forcer une nouvelle authentification ou nettoyer après une injection PTT.
 
 #### Pass-The-Ticket (PTT)

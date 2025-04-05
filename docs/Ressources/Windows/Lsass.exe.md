@@ -18,8 +18,8 @@ Lorsque vous vous connectez à Windows (localement ou via le réseau), le proces
 
 LSASS prend alors le relais :
 * Il fait appel à des **packages d'authentification** enregistrés (DLLs chargées dans l'espace mémoire de LSASS). Les plus courants sont :
-    * `msv1_0.dll` : Pour l'authentification NTLM (utilisé principalement pour les comptes locaux ou dans des environnements sans Kerberos). Il vérifie les informations par rapport à la base SAM (Security Account Manager) locale ou contacte un contrôleur de domaine.
-    * `kerberos.dll` : Pour l'authentification Kerberos (standard dans les environnements Active Directory). Il communique avec le Key Distribution Center (KDC) sur un contrôleur de domaine pour obtenir des tickets Kerberos (TGT, Service Tickets).
+    * `msv1_0.dll` : Pour l'authentification NTLM (utilisé principalement pour les comptes locaux ou dans des environnements sans [Kerberos](Kerberos.md)). Il vérifie les informations par rapport à la base SAM (Security Account Manager) locale ou contacte un contrôleur de domaine.
+    * `kerberos.dll` : Pour l'authentification Kerberos (standard dans les environnements Active Directory). Il communique avec le Key Distribution Center (KDC) sur un contrôleur de domaine pour obtenir des tickets [Kerberos](Kerberos.md) (TGT, Service Tickets).
     * `schannel.dll` : Pour l'authentification TLS/SSL.
     * `wdigest.dll` (historique, souvent désactivé) : Pour l'authentification Digest Access. Notamment connu car, s'il est activé, il pouvait stocker une copie du mot de passe en clair dans la mémoire de LSASS.
 * Ces packages valident les informations d'identification fournies.
@@ -60,7 +60,7 @@ Protéger LSASS et détecter les tentatives de compromission est crucial.
 
 * **Mécanismes de Protection :**
     * **Protected Process Light (PPL) pour LSASS :** Introduit dans Windows 8.1/Server 2012 R2. Si activé (via une clé de registre `RunAsPPL`), LSASS s'exécute comme un processus protégé. Cela empêche les processus non-protégés (même ceux exécutés en tant qu'Administrateur) d'ouvrir un handle sur LSASS avec des droits d'accès étendus (comme la lecture de mémoire ou l'injection de code). Seuls les processus signés par Microsoft et ayant la bonne EKU (Enhanced Key Usage) peuvent interagir pleinement avec un LSASS protégé.
-    * **Credential Guard :** Introduit dans Windows 10/Server 2016. Utilise la Sécurité Basée sur la Virtualisation (VBS) pour isoler le processus LSASS (ou plutôt une partie critique appelée LSAIso - LSA Isolated) dans un environnement virtualisé séparé du système d'exploitation principal. Les secrets (comme les hashes NTLM, tickets Kerberos TGT) sont stockés et gérés dans cet environnement isolé, rendant leur extraction depuis le LSASS normal (tournant dans le système principal) impossible, même avec des privilèges SYSTEM. Mimikatz ne peut pas accéder aux secrets gérés par LSAIso.
+    * **Credential Guard :** Introduit dans Windows 10/Server 2016. Utilise la Sécurité Basée sur la Virtualisation (VBS) pour isoler le processus LSASS (ou plutôt une partie critique appelée LSAIso - LSA Isolated) dans un environnement virtualisé séparé du système d'exploitation principal. Les secrets (comme les hashes NTLM, tickets [Kerberos](Kerberos.md) TGT) sont stockés et gérés dans cet environnement isolé, rendant leur extraction depuis le LSASS normal (tournant dans le système principal) impossible, même avec des privilèges SYSTEM. Mimikatz ne peut pas accéder aux secrets gérés par LSAIso.
     * **Désactivation de WDigest :** Assurer que la clé de registre `UseLogonCredential` sous `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest` est à 0.
     * **Mises à jour régulières :** Pour corriger les vulnérabilités potentielles dans LSASS ou les composants liés.
     * **Principe du moindre privilège :** Éviter d'utiliser des comptes à privilèges élevés pour les tâches quotidiennes.
@@ -68,7 +68,7 @@ Protéger LSASS et détecter les tentatives de compromission est crucial.
     * **Surveillance des accès au processus LSASS :** Utiliser des EDR (Endpoint Detection and Response) ou des règles Sysmon (Event ID 10 : ProcessAccess) pour détecter les tentatives d'ouverture de `lsass.exe` avec des droits suspects (ex: `PROCESS_VM_READ`) par des processus inhabituels (non-système, non-sécurité).
     * **Détection comportementale :** Les EDR modernes ont des modules spécifiques pour détecter les techniques connues de credential dumping (patterns d'accès mémoire, chargement de DLL suspectes dans LSASS, appels API caractéristiques).
     * **Analyse des dumps mémoire suspects :** Si des dumps de LSASS sont créés de manière inattendue.
-    * **Surveillance des événements d'audit :** Activer et surveiller les événements liés à l'authentification et à l'utilisation des privilèges (ex: Audit Credential Validation, Audit Kerberos Authentication Service, Audit Sensitive Privilege Use).
+    * **Surveillance des événements d'audit :** Activer et surveiller les événements liés à l'authentification et à l'utilisation des privilèges (ex: Audit Credential Validation, Audit [Kerberos](Kerberos.md) Authentication Service, Audit Sensitive Privilege Use).
 
 **7. Conclusion**
 
