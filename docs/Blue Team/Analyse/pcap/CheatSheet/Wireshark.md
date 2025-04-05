@@ -1,5 +1,3 @@
-# Wireshark Cheatsheet
-
 **Objectif :** Wireshark est l'analyseur de protocoles réseau le plus utilisé au monde. Il permet de capturer le trafic réseau en temps réel ou d'analyser des fichiers de capture (`.pcap`, `.pcapng`), de décortiquer les protocoles couche par couche, et d'appliquer des filtres puissants pour isoler et comprendre les communications.
 
 **Source :** [https://www.wireshark.org/](https://www.wireshark.org/)
