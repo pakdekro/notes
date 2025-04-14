@@ -5,7 +5,7 @@
 Analyser les vêtements portés par les personnes dans une image peut fournir des indices sur la localisation, le climat, la culture, voire le contexte socio-économique. Cependant, c'est un domaine complexe : la mode occidentale moderne (jeans, t-shirts, baskets...) est devenue quasi universelle, en particulier dans les zones urbaines. Il faut donc se concentrer sur les éléments les plus distinctifs : tenues traditionnelles, uniformes, vêtements de travail spécifiques, accessoires et adaptation évidente au climat, tout en étant conscient des limites de cette approche.
 
   
-
+---
 ## 1. Éléments Clés à Analyser
 
   
@@ -25,7 +25,7 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 * **Adaptation au Climat :** Vêtements chauds vs légers ? Protection solaire ou contre la pluie ?
 
   
-
+---
 ## 2. Tenues Traditionnelles / Folkloriques
 
   
@@ -34,26 +34,26 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 
 * **Exemples :**
 
-* *Kilt :* Écosse. 
+	* *Kilt :* Écosse. 
 
-* *Sari / Dhoti / Kurta :* Sous-continent Indien (Inde, Pakistan, Bangladesh, Népal, Sri Lanka). Le style de drapé du sari peut varier régionalement. 
+	* *Sari / Dhoti / Kurta :* Sous-continent Indien (Inde, Pakistan, Bangladesh, Népal, Sri Lanka). Le style de drapé du sari peut varier régionalement. 
 
-* *Kimono / Yukata :* Japon (surtout pour occasions spéciales). 
+	* *Kimono / Yukata :* Japon (surtout pour occasions spéciales). 
 
-* *Lederhosen / Dirndl :* Bavière (Allemagne), Autriche (souvent folklorique). 
+	* *Lederhosen / Dirndl :* Bavière (Allemagne), Autriche (souvent folklorique). 
 
-* *Djellaba / Caftan :* Afrique du Nord. 
+	* *Djellaba / Caftan :* Afrique du Nord. 
 
-* *Poncho / Chapeau Melon (Cholitas) :* Régions andines (Bolivie, Pérou...).
+	* *Poncho / Chapeau Melon (Cholitas) :* Régions andines (Bolivie, Pérou...).
 
-* *Dashiki :* Afrique de l'Ouest. 
+	* *Dashiki :* Afrique de l'Ouest. 
 
-* *Ao Dai :* Vietnam (surtout femmes, occasions spéciales). 
+	* *Ao Dai :* Vietnam (surtout femmes, occasions spéciales). 
 
 * **Reconnaissance :** Nécessite une connaissance culturelle spécifique ou une recherche d'images ciblée ("tenue traditionnelle [pays/région]").
 
   
-
+---
 ## 3. Uniformes
 
   
@@ -62,22 +62,22 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 
 * **Types :**
 
-* *Police / Gendarmerie / Armée :* La couleur (bleu marine, noir, vert, kaki, camouflage...), la coupe, les insignes (écussons, grades), la forme des casquettes/képis/bérets sont très distinctifs.
+	* *Police / Gendarmerie / Armée :* La couleur (bleu marine, noir, vert, kaki, camouflage...), la coupe, les insignes (écussons, grades), la forme des casquettes/képis/bérets sont très distinctifs.
 
-* *Services Postaux :* Couleurs et logos spécifiques par pays.
+	* *Services Postaux :* Couleurs et logos spécifiques par pays.
 
-* *Personnel des Transports :* Conducteurs de train/bus, personnel de gare/aéroport.
+	* *Personnel des Transports :* Conducteurs de train/bus, personnel de gare/aéroport.
 
-* *Livreurs :* Uniformes de sociétés de livraison (DHL, UPS, entreprises locales...).
+	* *Livreurs :* Uniformes de sociétés de livraison (DHL, UPS, entreprises locales...).
 
-* *Écoliers :* Très courants dans certains pays (UK, Irlande, Japon, Corée, Australie, Nouvelle-Zélande, nombreux pays d'Afrique, d'Asie, d'Amérique Latine). Le style (couleur, blazer, jupe/pantalon, cravate...) peut être spécifique à un pays ou même une école. 
+	* *Écoliers :* Très courants dans certains pays (UK, Irlande, Japon, Corée, Australie, Nouvelle-Zélande, nombreux pays d'Afrique, d'Asie, d'Amérique Latine). Le style (couleur, blazer, jupe/pantalon, cravate...) peut être spécifique à un pays ou même une école. 
 
-* *Personnel Médical :* Blouses, couleurs spécifiques (scrubs).
+	* *Personnel Médical :* Blouses, couleurs spécifiques (scrubs).
 
-* *Personnel de Service :* Compagnies aériennes, hôtels, chaînes de restauration rapide...
+	* *Personnel de Service :* Compagnies aériennes, hôtels, chaînes de restauration rapide...
 
   
-
+---
 ## 4. Vêtements de Travail (Non-Uniforme)
 
   
@@ -86,14 +86,14 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 
 * **Exemples :**
 
-* *Ouvriers du BTP :* Gilets haute visibilité (couleur - jaune, orange - et normes peuvent varier), casques (couleur peut indiquer le rôle sur certains chantiers), chaussures de sécurité, salopettes/bleus de travail.
+	* *Ouvriers du BTP :* Gilets haute visibilité (couleur - jaune, orange - et normes peuvent varier), casques (couleur peut indiquer le rôle sur certains chantiers), chaussures de sécurité, salopettes/bleus de travail.
 
-* *Agriculteurs / Pêcheurs :* Vêtements pratiques, souvent robustes. Chapeaux de paille spécifiques, bottes en caoutchouc, type de panier ou d'outil porté.
+	* *Agriculteurs / Pêcheurs :* Vêtements pratiques, souvent robustes. Chapeaux de paille spécifiques, bottes en caoutchouc, type de panier ou d'outil porté.
 
-* *Vendeurs de Marché :* Tabliers, tenues simples.
+	* *Vendeurs de Marché :* Tabliers, tenues simples.
 
   
-
+---
 ## 5. Tenues Religieuses
 
   
@@ -102,16 +102,16 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 
 * **Exemples :**
 
-* *Couvre-chefs féminins musulmans :* Hijab (foulard couvrant cheveux et cou), Niqab (voile couvrant le visage sauf les yeux), Burqa (voile intégral). Styles et prévalence varient selon les pays et régions.
+	* *Couvre-chefs féminins musulmans :* Hijab (foulard couvrant cheveux et cou), Niqab (voile couvrant le visage sauf les yeux), Burqa (voile intégral). Styles et prévalence varient selon les pays et régions.
 
-* *Couvre-chefs masculins :* Turban (Sikhs, certains musulmans - styles varient), Kippa/Yarmulke (Juifs), Chéchia/Fez (Afrique du Nord).
+	* *Couvre-chefs masculins :* Turban (Sikhs, certains musulmans - styles varient), Kippa/Yarmulke (Juifs), Chéchia/Fez (Afrique du Nord).
 
-* *Tenues monastiques :* Robes de moines bouddhistes (couleur safran, marron, grise selon les écoles/régions), habits de nonnes/prêtres chrétiens (styles varient selon les ordres).
+	* *Tenues monastiques :* Robes de moines bouddhistes (couleur safran, marron, grise selon les écoles/régions), habits de nonnes/prêtres chrétiens (styles varient selon les ordres).
 
-* *Symboles :* Croix, Étoile de David, Om, etc., portés en bijoux ou sur les vêtements.
+	* *Symboles :* Croix, Étoile de David, Om, etc., portés en bijoux ou sur les vêtements.
 
   
-
+---
 ## 6. Indices Climatiques
 
   
@@ -125,7 +125,7 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 * **Temps Pluvieux :** Imperméables, K-ways, parapluies (la forme et la taille des parapluies peuvent parfois être un indice mineur).
 
   
-
+---
 ## 7. Accessoires
 
   
@@ -139,7 +139,7 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 * **Sacs :** Sacs à dos, sacs en bandoulière, paniers traditionnels.
 
   
-
+---
 ## 8. Logos, Marques et Inscriptions
 
   
@@ -148,16 +148,16 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 
 * **Indices Utiles :**
 
-* Logos d'équipes sportives locales (football, baseball...).
+	* Logos d'équipes sportives locales (football, baseball...).
 
-* Noms ou logos d'universités, d'écoles.
+	* Noms ou logos d'universités, d'écoles.
 
-* Marques de supermarchés ou d'entreprises locales sur les sacs de courses ou vêtements promotionnels.
+	* Marques de supermarchés ou d'entreprises locales sur les sacs de courses ou vêtements promotionnels.
 
-* Messages/Slogans en langue locale.
+	* Messages/Slogans en langue locale.
 
   
-
+---
 ## 9. Limites et Précautions
 
   
@@ -173,7 +173,7 @@ Analyser les vêtements portés par les personnes dans une image peut fournir de
 * **Rapidité des Tendances :** La mode change vite.
 
   
-
+---
 ## 10. Application OSINT
 
   

@@ -1,7 +1,7 @@
-Le marquage au sol constitue l'un des indices visuels les plus fiables et les plus omniprésents pour la géolocalisation. Bien que la Convention de Vienne de 1968 sur la signalisation routière ait tenté d'harmoniser les pratiques, de nombreux pays (y compris de grands pays comme les États-Unis, le Canada, l'Australie) ne l'ont pas ratifiée ou appliquent des variations significatives. Ces différences sont précieuses pour l'OSINT et GeoGuessr.
+Le marquage au sol constitue l'un des indices visuels les plus fiables et les plus omniprésents pour la géolocalisation. Bien que la Convention de Vienne de 1968 sur la signalisation routière ait tenté d'harmoniser les pratiques, de nombreux pays (y compris de grands pays comme les États-Unis, le Canada, l'Australie) ne l'ont pas ratifiée ou appliquent des variations significatives. Ces différences sont précieuses pour l'OSINT.
 
   
-
+---
 ## 1. Éléments Clés à Analyser
 
   
@@ -17,51 +17,51 @@ Le marquage au sol constitue l'un des indices visuels les plus fiables et les pl
 * **Matériau et Réflectivité :** Peinture simple, enduit thermoplastique (plus épais), présence de plots réfléchissants ("yeux de chat") ?
 
   
-
+---
 ## 2. Le Code Couleur
 
   
 
 * **Blanc :**
 
-* **Usage :** Le plus courant mondialement, surtout dans les pays suivant la Convention de Vienne (majorité de l'Europe).
+	* **Usage :** Le plus courant mondialement, surtout dans les pays suivant la Convention de Vienne (majorité de l'Europe).
 
-* **Signification typique :** Lignes de rive (bords de chaussée), séparation de voies de même sens, lignes discontinues pour l'axe central (si dépassement autorisé des deux côtés), passages piétons, lignes d'arrêt, flèches directionnelles.
+	* **Signification typique :** Lignes de rive (bords de chaussée), séparation de voies de même sens, lignes discontinues pour l'axe central (si dépassement autorisé des deux côtés), passages piétons, lignes d'arrêt, flèches directionnelles.
 
 * **Jaune :**
 
-* **Usage :** Très courant en Amérique du Nord (USA, Canada), Australie, Nouvelle-Zélande, Japon, Norvège, parfois Suisse.
+	* **Usage :** Très courant en Amérique du Nord (USA, Canada), Australie, Nouvelle-Zélande, Japon, Norvège, parfois Suisse.
 
-* **Signification typique :**
+	* **Signification typique :**
 
-* *Axe central :* Sépare les sens de circulation opposés. Une double ligne jaune continue interdit le dépassement dans les deux sens. Une ligne jaune continue + une discontinue autorise le dépassement du côté de la discontinue. Une ligne jaune discontinue autorise le dépassement (si la voie est libre).
+		* *Axe central :* Sépare les sens de circulation opposés. Une double ligne jaune continue interdit le dépassement dans les deux sens. Une ligne jaune continue + une discontinue autorise le dépassement du côté de la discontinue. Une ligne jaune discontinue autorise le dépassement (si la voie est libre).
 
-* *Marquage temporaire :* En Europe, le jaune prime sur le blanc pour les marquages de travaux.
+		* *Marquage temporaire :* En Europe, le jaune prime sur le blanc pour les marquages de travaux.
 
-* *Restrictions de stationnement :* Lignes jaunes sur le bord de la chaussée (ex: UK, Irlande).
+		* *Restrictions de stationnement :* Lignes jaunes sur le bord de la chaussée (ex: UK, Irlande).
 
-* *Voies de bus :* Parfois.
+		* *Voies de bus :* Parfois.
 
 * **Rouge :**
 
-* **Usage :** Moins fréquent.
+	* **Usage :** Moins fréquent.
 
-* **Signification typique :** Interdiction formelle d'arrêt ou de stationnement (bordures de trottoir peintes en rouge aux USA), voies de bus (ex: Londres), zones spécifiques à ne pas bloquer.
+	* **Signification typique :** Interdiction formelle d'arrêt ou de stationnement (bordures de trottoir peintes en rouge aux USA), voies de bus (ex: Londres), zones spécifiques à ne pas bloquer.
 
 * **Bleu :**
 
-* **Usage :** Rare pour les lignes, plus courant pour les symboles.
+	* **Usage :** Rare pour les lignes, plus courant pour les symboles.
 
-* **Signification typique :** Places de stationnement réservées aux personnes handicapées.
+	* **Signification typique :** Places de stationnement réservées aux personnes handicapées.
 
 * **Vert :**
 
-* **Usage :** Très rare pour les lignes de circulation générale.
+	* **Usage :** Très rare pour les lignes de circulation générale.
 
-* **Signification typique :** Parfois utilisé pour les pistes cyclables ou des zones de guidage spécifiques.
+	* **Signification typique :** Parfois utilisé pour les pistes cyclables ou des zones de guidage spécifiques.
 
   
-
+---
 ## 3. Types de Lignes et Leur Signification
 
   
@@ -77,38 +77,38 @@ Le marquage au sol constitue l'un des indices visuels les plus fiables et les pl
 * **Bandes Rugueuses (Rumble Strips) :** Bandes texturées ou fraisées sur les lignes de rive ou centrales pour alerter les conducteurs par vibration/bruit. Leur design (forme, espacement) peut varier.
 
   
-
+---
 ## 4. Marquages Spécifiques
 
   
 
 * **Passages Piétons :**
 
-* *Zébrures (Europe continentale) :* Larges bandes blanches parallèles au sens de la marche.
+	* *Zébrures (Europe continentale) :* Larges bandes blanches parallèles au sens de la marche.
 
-* *Lignes parallèles (USA/Canada) :* Deux lignes blanches parallèles délimitant la zone de traversée.
+	* *Lignes parallèles (USA/Canada) :* Deux lignes blanches parallèles délimitant la zone de traversée.
 
-* *Échelle (Ladder - UK/Irlande/Australie...) :* Bandes larges perpendiculaires au sens de la marche.
+	* *Échelle (Ladder - UK/Irlande/Australie...) :* Bandes larges perpendiculaires au sens de la marche.
 
-* *Couleurs :* Parfois jaunes (Chine, certains pays d'Am. Latine).
+	* *Couleurs :* Parfois jaunes (Chine, certains pays d'Am. Latine).
 
-* *Marques d'approche :* Lignes en zigzag (UK/Irlande), losanges (Japon, USA/Canada).
+	* *Marques d'approche :* Lignes en zigzag (UK/Irlande), losanges (Japon, USA/Canada).
 
 * **Lignes d'Arrêt (Stop) :** Ligne blanche continue épaisse, perpendiculaire à la voie, avant une intersection ou un panneau STOP.
 
 * **Lignes de "Cédez le Passage" (Yield/Give Way) :**
 
-* *Triangles Pointant vers le Conducteur :* Très courant en Europe (Convention de Vienne).
+	* *Triangles Pointant vers le Conducteur :* Très courant en Europe (Convention de Vienne).
 
-* *Ligne Discontinue Large :* Alternative dans certains pays.
+	* *Ligne Discontinue Large :* Alternative dans certains pays.
 
 * **Flèches Directionnelles :** Indiquent les directions autorisées pour chaque voie. Leur style (forme de la pointe, épaisseur) varie grandement.
 
 * **Inscriptions au Sol :**
 
-* "STOP", "BUS", "TAXI", "SCHOOL", limitations de vitesse, noms de villes/sorties.
+	* "STOP", "BUS", "TAXI", "SCHOOL", limitations de vitesse, noms de villes/sorties.
 
-* *La police de caractères et la langue sont des indices cruciaux.*
+	* *La police de caractères et la langue sont des indices cruciaux.*
 
 * **Zones Hachurées / Chevrons :** Indiquent des zones où il est interdit de circuler ou de stationner. L'orientation et l'espacement des hachures peuvent varier.
 
@@ -117,7 +117,7 @@ Le marquage au sol constitue l'un des indices visuels les plus fiables et les pl
 * **Pistes Cyclables :** Souvent délimitées par des lignes (blanches, parfois vertes/rouges) et un symbole de vélo. Le design du symbole varie.
 
   
-
+---
 ## 5. Exemples de Variations Régionales Notables
 
   
@@ -133,7 +133,7 @@ Le marquage au sol constitue l'un des indices visuels les plus fiables et les pl
 * **Japon :** Conduite à gauche. Jaune fréquent pour l'axe central. Losanges peints au sol à l'approche des passages piétons. Feux de circulation souvent avec fond noir et contour blanc.
 
   
-
+---
 ## 6. Application OSINT
 
   

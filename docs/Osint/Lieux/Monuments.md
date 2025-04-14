@@ -1,7 +1,7 @@
 Les monuments et sites célèbres sont des points d'ancrage visuels essentiels pour l'identification de lieux en OSINT et GeoGuessr. Les plus iconiques permettent une localisation quasi instantanée. Reconnaître des sites moins universellement connus demande plus de pratique et de connaissances régionales. Cette liste présente des exemples marquants par pays, incluant des structures architecturales et des sites naturels emblématiques.
 
   
-
+---
 ## Europe
 
   
@@ -111,7 +111,7 @@ Les monuments et sites célèbres sont des points d'ancrage visuels essentiels p
 * **Suisse :** Jet d'eau (Genève), Cervin/Matterhorn (montagne)
 
   
-
+---
 ## Amérique du Nord
 
   
@@ -159,7 +159,7 @@ Les monuments et sites célèbres sont des points d'ancrage visuels essentiels p
 * **Palenque** (Chiapas)
 
   
-
+---
 ## Amérique du Sud
 
   
@@ -203,7 +203,7 @@ Les monuments et sites célèbres sont des points d'ancrage visuels essentiels p
 * **Désert d'Atacama** (site naturel)
 
   
-
+---
 ## Asie
 
   
@@ -279,7 +279,7 @@ Les monuments et sites célèbres sont des points d'ancrage visuels essentiels p
 * **Jordanie :** Pétra 
 
   
-
+---
 ## Océanie
 
   
@@ -303,7 +303,7 @@ Les monuments et sites célèbres sont des points d'ancrage visuels essentiels p
 * Sites naturels emblématiques : **Fiordland (Milford Sound), Mont Cook/Aoraki, Tongariro Alpine Crossing, Rotorua (géothermie)**.
 
   
-
+---
 ## Afrique (hors Égypte)
 
   
@@ -341,7 +341,7 @@ Les monuments et sites célèbres sont des points d'ancrage visuels essentiels p
 * **Sénégal :** Monument de la Renaissance Africaine (Dakar)
 
   
-
+---
 ## Application OSINT
 
   

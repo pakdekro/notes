@@ -4,7 +4,7 @@
 
 La langue visible sur les panneaux, les enseignes, les publicités ou les graffitis est l'un des indices de géolocalisation les plus directs et les plus puissants. Reconnaître l'alphabet utilisé, les caractères spéciaux (diacritiques), certains mots courants ou même la structure générale d'une phrase peut considérablement affiner une recherche. Cette note vise à fournir des clés de reconnaissance pour diverses langues et systèmes d'écriture.
 
-  
+---  
 
 ## 1. Éléments Clés à Analyser
 
@@ -21,7 +21,7 @@ La langue visible sur les panneaux, les enseignes, les publicités ou les graffi
 * **Direction de l'Écriture :** Gauche à droite (majorité), droite à gauche (arabe, hébreu), verticale (traditionnel est-asiatique).
 
   
-
+---
 ## 2. Aperçu des Principaux Systèmes d'Écriture et Exemples
 
   
@@ -40,51 +40,51 @@ Très répandu, mais avec de nombreuses variations nationales via les diacritiqu
 
 * **Langues Romanes :**
 
-* *Français :* Où se trouve la gare ? (Présence d'accents, ç)
+	* *Français :* Où se trouve la gare ? (Présence d'accents, ç)
 
-* *Espagnol :* ¿Dónde está la estación? (Points d'interrogation/exclamation inversés ¿ ¡, présence de ñ, accents aigus á é í ó ú)
+	* *Espagnol :* ¿Dónde está la estación? (Points d'interrogation/exclamation inversés ¿ ¡, présence de ñ, accents aigus á é í ó ú)
 
-* *Portugais :* Onde fica a estação? (Présence de ç, ã, õ, accents variés â ê ô á é í ó ú)
+	* *Portugais :* Onde fica a estação? (Présence de ç, ã, õ, accents variés â ê ô á é í ó ú)
 
-* *Italien :* Dov'è la stazione? (Usage fréquent d'accents graves sur la voyelle finale à è ì ò ù)
+	* *Italien :* Dov'è la stazione? (Usage fréquent d'accents graves sur la voyelle finale à è ì ò ù)
 
-* *Roumain :* Unde este gara? (Présence de ă, â, î, ș, ț)
+	* *Roumain :* Unde este gara? (Présence de ă, â, î, ș, ț)
 
 * **Langues Germaniques :**
 
-* *Anglais :* Where is the station? (Peu de diacritiques, structure SVO)
+	* *Anglais :* Where is the station? (Peu de diacritiques, structure SVO)
 
-* *Allemand :* Wo ist der Bahnhof? (Noms communs en majuscule, présence de ä, ö, ü, ß)
+	* *Allemand :* Wo ist der Bahnhof? (Noms communs en majuscule, présence de ä, ö, ü, ß)
 
-* *Néerlandais :* Waar is het station? (Usage de "ij", doubles voyelles aa ee oo uu)
+	* *Néerlandais :* Waar is het station? (Usage de "ij", doubles voyelles aa ee oo uu)
 
-* *Suédois :* Var är stationen? (Présence de å, ä, ö)
+	* *Suédois :* Var är stationen? (Présence de å, ä, ö)
 
-* *Norvégien :* Hvor er stasjonen? (Présence de ø, æ, å)
+	* *Norvégien :* Hvor er stasjonen? (Présence de ø, æ, å)
 
-* *Danois :* Hvor er stationen? (Présence de ø, æ, å - similaire au norvégien)
+	* *Danois :* Hvor er stationen? (Présence de ø, æ, å - similaire au norvégien)
 
 * **Langues Slaves (Alphabet Latin) :**
 
-* *Polonais :* Gdzie jest stacja? (Diacritiques spécifiques : ą, ę, ć, ł, ń, ó, ś, ź, ż. Beaucoup de "sz", "cz", "rz")
+	* *Polonais :* Gdzie jest stacja? (Diacritiques spécifiques : ą, ę, ć, ł, ń, ó, ś, ź, ż. Beaucoup de "sz", "cz", "rz")
 
-* *Tchèque :* Kde je nádraží? (Diacritiques : á, é, í, ó, ú, ů, ý, č, ď, ě, ň, ř, š, ť, ž. Le "ř" est unique)
+	* *Tchèque :* Kde je nádraží? (Diacritiques : á, é, í, ó, ú, ů, ý, č, ď, ě, ň, ř, š, ť, ž. Le "ř" est unique)
 
-* *Slovaque :* Kde je stanica? (Diacritiques : á, ä, é, í, ó, ô, ú, ý, č, ď, ľ, ĺ, ň, ŕ, š, ť, ž)
+	* *Slovaque :* Kde je stanica? (Diacritiques : á, ä, é, í, ó, ô, ú, ý, č, ď, ľ, ĺ, ň, ŕ, š, ť, ž)
 
-* *Croate / Bosnien / Serbe (latin) :* Gdje je stanica? / Gde je stanica? (Diacritiques : č, ć, đ, š, ž)
+	* *Croate / Bosnien / Serbe (latin) :* Gdje je stanica? / Gde je stanica? (Diacritiques : č, ć, đ, š, ž)
 
-* *Slovène :* Kje je postaja? (Diacritiques : č, š, ž)
+	* *Slovène :* Kje je postaja? (Diacritiques : č, š, ž)
 
 * **Autres Langues (Alphabet Latin) :**
 
-* *Finnois :* Missä on asema? (Doubles voyelles/consonnes fréquentes, présence de ä, ö)
+	* *Finnois :* Missä on asema? (Doubles voyelles/consonnes fréquentes, présence de ä, ö)
 
-* *Hongrois :* Hol van az állomás? (Accents aigus sur voyelles á éí ó ú, doubles accents ő ű)
+	* *Hongrois :* Hol van az állomás? (Accents aigus sur voyelles á éí ó ú, doubles accents ő ű)
 
-* *Turc :* İstasyon nerede? (Présence de ı, ö, ü, ç, ğ, ş)
+	* *Turc :* İstasyon nerede? (Présence de ı, ö, ü, ç, ğ, ş)
 
-* *Vietnamien :* Ga xe lửa ở đâu? (Nombreux diacritiques indiquant les tons : à á ả ã ạ, etc.)
+	* *Vietnamien :* Ga xe lửa ở đâu? (Nombreux diacritiques indiquant les tons : à á ả ã ạ, etc.)
 
   
 
@@ -171,7 +171,7 @@ Grande variété de scripts. Le Devanagari (Hindi, Marathi, Nepali...) est recon
 Il existe de nombreux autres systèmes d'écriture distinctifs : Géorgien (მხედრული), Arménien (հայերեն), Thaï (ไทย), Lao (ລາວ), Khmer (ខ្មែរ), Éthiopien (ግዕዝ), etc., chacun avec ses propres caractéristiques visuelles uniques.
 
   
-
+---
 ## 3. Conseils pour la Reconnaissance
 
   
@@ -185,7 +185,7 @@ Il existe de nombreux autres systèmes d'écriture distinctifs : Géorgien (მ�
 * **Observez la Forme Générale :** L'aspect cursif lié de l'arabe, la ligne supérieure du Devanagari, les blocs carrés du Hangul coréen sont très reconnaissables.
 
   
-
+---
 ## 4. Application OSINT
 
   

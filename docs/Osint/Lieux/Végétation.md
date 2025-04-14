@@ -5,7 +5,7 @@
 La flore visible dans une image ou une vidéo – qu'il s'agisse d'arbres, de cultures agricoles, de plantes sauvages ou même de l'état d'une pelouse – est une source d'indices géographiques de premier ordre. La végétation est intimement liée au climat (température, précipitations), à la latitude, à l'altitude et au type de sol, permettant souvent de déduire la région du monde où l'on se trouve.
 
   
-
+---
 ## 1. Éléments Clés à Analyser
 
   
@@ -21,7 +21,7 @@ La flore visible dans une image ou une vidéo – qu'il s'agisse d'arbres, de cu
 * **État Saisonnièr :** Arbres en fleurs, feuilles vertes, couleurs d'automne, arbres dénudés, présence de neige ?
 
   
-
+---
 ## 2. Biomes Climatiques et Végétation Associée
 
   
@@ -32,78 +32,78 @@ Reconnaître le biome général est une première étape essentielle :
 
 * **Forêts Tropicales Humides (Équatoriales) :**
 
-* *Climat :* Chaud et très humide toute l'année.
+	* *Climat :* Chaud et très humide toute l'année.
 
-* *Végétation :* Très dense, grands arbres à larges feuilles persistantes, lianes, épiphytes (orchidées, fougères sur les arbres). Grande biodiversité.
+	* *Végétation :* Très dense, grands arbres à larges feuilles persistantes, lianes, épiphytes (orchidées, fougères sur les arbres). Grande biodiversité.
 
-* *Localisation :* Bassin Amazonien, Bassin du Congo, Asie du Sud-Est.
+	* *Localisation :* Bassin Amazonien, Bassin du Congo, Asie du Sud-Est.
 
 * **Savanes / Prairies Tropicales :**
 
-* *Climat :* Chaud avec saison sèche marquée.
+	* *Climat :* Chaud avec saison sèche marquée.
 
-* *Végétation :* Hautes herbes dominant, arbres épars ou groupés résistants à la sécheresse (acacias, baobabs).
+	* *Végétation :* Hautes herbes dominant, arbres épars ou groupés résistants à la sécheresse (acacias, baobabs).
 
-* *Localisation :* Grande partie de l'Afrique sub-saharienne, certaines régions d'Amérique du Sud, Australie, Inde.
+	* *Localisation :* Grande partie de l'Afrique sub-saharienne, certaines régions d'Amérique du Sud, Australie, Inde.
 
 * **Déserts (Chauds et Froids) :**
 
-* *Climat :* Très faible pluviométrie, températures extrêmes.
+	* *Climat :* Très faible pluviométrie, températures extrêmes.
 
-* *Végétation :* Très éparse, adaptée à la sécheresse : cactus, plantes succulentes, arbustes résistants, herbes rares. Oasis avec palmiers dattiers.
+	* *Végétation :* Très éparse, adaptée à la sécheresse : cactus, plantes succulentes, arbustes résistants, herbes rares. Oasis avec palmiers dattiers.
 
-* *Localisation :* Sahara, Gobi, Atacama, Sud-Ouest USA, centre Australie...
+	* *Localisation :* Sahara, Gobi, Atacama, Sud-Ouest USA, centre Australie...
 
 * **Climat Méditerranéen :**
 
-* *Climat :* Étés chauds et secs, hivers doux et humides.
+	* *Climat :* Étés chauds et secs, hivers doux et humides.
 
-* *Végétation :* Arbustes résistants à la sécheresse (maquis, garrigue), oliviers, vignes, agrumes, chênes-lièges, pins spécifiques (pin d'Alep).
+	* *Végétation :* Arbustes résistants à la sécheresse (maquis, garrigue), oliviers, vignes, agrumes, chênes-lièges, pins spécifiques (pin d'Alep).
 
-* *Localisation :* Bassin Méditerranéen, Californie, Chili central, région du Cap (Afrique du Sud), Sud-Ouest de l'Australie.
+	* *Localisation :* Bassin Méditerranéen, Californie, Chili central, région du Cap (Afrique du Sud), Sud-Ouest de l'Australie.
 
 * **Prairies Tempérées (Steppe, Prairie, Pampa) :**
 
-* *Climat :* Continental avec variations de température, pluviométrie modérée.
+	* *Climat :* Continental avec variations de température, pluviométrie modérée.
 
-* *Végétation :* Dominée par les herbes, peu d'arbres (sauf le long des cours d'eau).
+	* *Végétation :* Dominée par les herbes, peu d'arbres (sauf le long des cours d'eau).
 
-* *Localisation :* Grandes Plaines (USA/Canada), Pampas (Argentine), Steppes (Eurasie).
+	* *Localisation :* Grandes Plaines (USA/Canada), Pampas (Argentine), Steppes (Eurasie).
 
 * **Forêts Tempérées Décidues (à feuilles caduques) :**
 
-* *Climat :* Quatre saisons distinctes, hivers froids.
+	* *Climat :* Quatre saisons distinctes, hivers froids.
 
-* *Végétation :* Arbres à larges feuilles qui tombent en hiver (chênes, érables, hêtres, bouleaux...). Couleurs d'automne marquées.
+	* *Végétation :* Arbres à larges feuilles qui tombent en hiver (chênes, érables, hêtres, bouleaux...). Couleurs d'automne marquées.
 
-* *Localisation :* Est des USA, Europe de l'Ouest et Centrale, Est de l'Asie.
+	* *Localisation :* Est des USA, Europe de l'Ouest et Centrale, Est de l'Asie.
 
 * **Forêts Tempérées Humides :**
 
-* *Climat :* Fortes précipitations, températures modérées.
+	* *Climat :* Fortes précipitations, températures modérées.
 
-* *Végétation :* Souvent grands conifères (Douglas, Séquoia, Épicéa de Sitka) ou feuillus spécifiques. Mousses, lichens et fougères abondants.
+	* *Végétation :* Souvent grands conifères (Douglas, Séquoia, Épicéa de Sitka) ou feuillus spécifiques. Mousses, lichens et fougères abondants.
 
-* *Localisation :* Côte Pacifique Nord-Ouest (USA/Canada), Sud du Chili, Nouvelle-Zélande, Norvège côtière...
+	* *Localisation :* Côte Pacifique Nord-Ouest (USA/Canada), Sud du Chili, Nouvelle-Zélande, Norvège côtière...
 
 * **Forêts Boréales (Taïga) :**
 
-* *Climat :* Hivers longs et très froids, étés courts.
+	* *Climat :* Hivers longs et très froids, étés courts.
 
-* *Végétation :* Dominée par les conifères résistants au froid (épicéas, sapins, pins, mélèzes). Plus grand biome terrestre.
+	* *Végétation :* Dominée par les conifères résistants au froid (épicéas, sapins, pins, mélèzes). Plus grand biome terrestre.
 
-* *Localisation :* Canada, Alaska, Scandinavie, Sibérie.
+	* *Localisation :* Canada, Alaska, Scandinavie, Sibérie.
 
 * **Toundra :**
 
-* *Climat :* Très froid, permafrost (sol gelé en permanence).
+	* *Climat :* Très froid, permafrost (sol gelé en permanence).
 
-* *Végétation :* Absence d'arbres (ou arbres nains), végétation basse : mousses, lichens, bruyères, saules rampants.
+	* *Végétation :* Absence d'arbres (ou arbres nains), végétation basse : mousses, lichens, bruyères, saules rampants.
 
-* *Localisation :* Régions arctiques, hautes montagnes (toundra alpine).
+	* *Localisation :* Régions arctiques, hautes montagnes (toundra alpine).
 
   
-
+---
 ## 3. Arbres et Plantes Indicateurs Spécifiques
 
   
@@ -114,13 +114,13 @@ Certains arbres ou plantes sont emblématiques d'une région :
 
 * **Palmiers :** Indiquent un climat chaud, mais le type est crucial !
 
-* *Palmier Dattier :* Zones arides/désertiques (Moyen-Orient, Afrique du Nord). 
+	* *Palmier Dattier :* Zones arides/désertiques (Moyen-Orient, Afrique du Nord). 
 
-* *Cocotier :* Côtes tropicales humides. 
+	* *Cocotier :* Côtes tropicales humides. 
 
-* *Palmier de Californie / Washingtonia :* Typique du Sud-Ouest USA. 
+	* *Palmier de Californie / Washingtonia :* Typique du Sud-Ouest USA. 
 
-* *Palmier des Canaries :* Souvent planté en climat méditerranéen. 
+	* *Palmier des Canaries :* Souvent planté en climat méditerranéen. 
 
 * **Eucalyptus :** Natif d'Australie, mais planté massivement ailleurs (Portugal, Californie, Afrique du Sud...). Écorce et feuilles reconnaissables. 
 
@@ -139,7 +139,7 @@ Certains arbres ou plantes sont emblématiques d'une région :
 * **Bambou :** Herbe géante à croissance rapide, très commune en Asie, mais présente ailleurs.
 
   
-
+---
 ## 4. Indices Agricoles
 
   
@@ -164,7 +164,7 @@ Les cultures renseignent sur le climat et les pratiques locales :
 * **Colza :** Champs d'un jaune éclatant au printemps (Europe, Canada...). 
 
   
-
+---
 ## 5. Autres Indices Végétaux
 
   
@@ -176,7 +176,7 @@ Les cultures renseignent sur le climat et les pratiques locales :
 * **Plantes Ornementales :** Bougainvilliers (climats chauds), rhododendrons, hortensias... peuvent donner des indices.
 
   
-
+---
 ## 6. Application OSINT
 
   

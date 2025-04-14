@@ -5,7 +5,7 @@
 L'architecture des bâtiments est un puissant indicateur géographique. Les styles de construction, les matériaux utilisés et les caractéristiques spécifiques varient énormément à travers le monde, influencés par le climat, l'histoire, la culture locale, les ressources disponibles et les réglementations. Analyser l'architecture demande de l'observation, mais peut permettre de localiser une image avec une précision surprenante, parfois jusqu'à une région ou une ville spécifique.
 
   
-
+---
 ## 1. Éléments Clés à Analyser
 
   
@@ -25,115 +25,115 @@ L'architecture des bâtiments est un puissant indicateur géographique. Les styl
 * **Âge et État du Bâtiment :** Neuf, ancien, rénové, délabré ?
 
   
-
+---
 ## 2. Influence du Climat
 
   
 
 * **Climats Froids :**
 
-* *Toits en forte pente :* Pour évacuer la neige (Scandinavie, Canada, Alpes...).
+	* *Toits en forte pente :* Pour évacuer la neige (Scandinavie, Canada, Alpes...).
 
-* *Petites fenêtres :* Pour limiter les pertes de chaleur.
+	* *Petites fenêtres :* Pour limiter les pertes de chaleur.
 
-* *Cheminées centrales/imposantes.*
+	* *Cheminées centrales/imposantes.*
 
-* *Matériaux isolants :* Bois souvent prédominant.
+	* *Matériaux isolants :* Bois souvent prédominant.
 
 * **Climats Chauds et Arides :**
 
-* *Toits plats ou très faible pente :* Parfois utilisés comme terrasse.
+	* *Toits plats ou très faible pente :* Parfois utilisés comme terrasse.
 
-* *Murs épais :* Inertie thermique (pierre, pisé, adobe - ex: Méditerranée, Moyen-Orient, Mexique, Sud-Ouest USA).
+	* *Murs épais :* Inertie thermique (pierre, pisé, adobe - ex: Méditerranée, Moyen-Orient, Mexique, Sud-Ouest USA).
 
-* *Petites fenêtres :* Limiter l'entrée du soleil.
+	* *Petites fenêtres :* Limiter l'entrée du soleil.
 
-* *Couleurs claires :* Pour réfléchir la chaleur (blanc typique des îles grecques).
+	* *Couleurs claires :* Pour réfléchir la chaleur (blanc typique des îles grecques).
 
-* *Cours intérieures (patios) :* Pour la fraîcheur.
+	* *Cours intérieures (patios) :* Pour la fraîcheur.
 
 * **Climats Chauds et Humides :**
 
-* *Fondations surélevées (pilotis) :* Pour la ventilation et contre les inondations/animaux (Asie du Sud-Est, certaines zones d'Afrique/Am. Latine).
+	* *Fondations surélevées (pilotis) :* Pour la ventilation et contre les inondations/animaux (Asie du Sud-Est, certaines zones d'Afrique/Am. Latine).
 
-* *Larges avant-toits, vérandas, porches :* Pour l'ombre et la protection contre la pluie.
+	* *Larges avant-toits, vérandas, porches :* Pour l'ombre et la protection contre la pluie.
 
-* *Ventilation croisée :* Grandes fenêtres, persiennes, jalousies.
+	* *Ventilation croisée :* Grandes fenêtres, persiennes, jalousies.
 
-* *Matériaux légers :* Bois, bambou.
+	* *Matériaux légers :* Bois, bambou.
 
   
-
+---
 ## 3. Matériaux de Construction Visibles
 
   
 
 * **Brique :**
 
-* *Couleur :* Rouge (UK, Pays-Bas, Est USA...), jaune (Belgique, Nord France...), marron, grise...
+	* *Couleur :* Rouge (UK, Pays-Bas, Est USA...), jaune (Belgique, Nord France...), marron, grise...
 
-* *Taille et Appareillage (motif de pose) :* Varient régionalement.
+	* *Taille et Appareillage (motif de pose) :* Varient régionalement.
 
 * **Pierre :**
 
-* *Type :* Granit (Bretagne, Écosse...), calcaire (Bourgogne, Sud Angleterre...), grès, pierre de taille vs moellons bruts. La couleur dépend de la géologie locale.
+	* *Type :* Granit (Bretagne, Écosse...), calcaire (Bourgogne, Sud Angleterre...), grès, pierre de taille vs moellons bruts. La couleur dépend de la géologie locale.
 
 * **Bois :**
 
-* *Colombages (Half-timbering / Fachwerk) :* Structure en bois apparente, remplissage en torchis, brique ou autre (Allemagne, Alsace, Normandie, UK...).
+	* *Colombages (Half-timbering / Fachwerk) :* Structure en bois apparente, remplissage en torchis, brique ou autre (Allemagne, Alsace, Normandie, UK...).
 
-* *Bardage (Clapboard/Siding) :* Planches horizontales ou verticales (très courant en Amérique du Nord, Scandinavie).
+	* *Bardage (Clapboard/Siding) :* Planches horizontales ou verticales (très courant en Amérique du Nord, Scandinavie).
 
-* *Madriers (Log cabin) :* Amérique du Nord, Scandinavie, Russie.
+	* *Madriers (Log cabin) :* Amérique du Nord, Scandinavie, Russie.
 
 * **Enduit (Stuc / Crépi / Plâtre) :**
 
-* Très courant pour masquer des matériaux moins nobles ou pour l'esthétique. Couleurs et textures variées (Méditerranée, Amérique Latine...).
+	* Très courant pour masquer des matériaux moins nobles ou pour l'esthétique. Couleurs et textures variées (Méditerranée, Amérique Latine...).
 
 * **Béton :**
 
-* *Brutalisme :* Style architectural utilisant le béton brut (souvent années 50-70).
+	* *Brutalisme :* Style architectural utilisant le béton brut (souvent années 50-70).
 
-* *Construction moderne :* Blocs de béton (parpaings) souvent enduits, béton préfabriqué (grands ensembles).
+	* *Construction moderne :* Blocs de béton (parpaings) souvent enduits, béton préfabriqué (grands ensembles).
 
 * **Terre Crue (Adobe / Pisé / Torchis) :**
 
-* Régions arides ou rurales, construction traditionnelle (Afrique, Moyen-Orient, Amérique Latine, Sud-Ouest USA).
+	* Régions arides ou rurales, construction traditionnelle (Afrique, Moyen-Orient, Amérique Latine, Sud-Ouest USA).
 
   
-
+---
 ## 4. Toits : Formes et Matériaux
 
   
 
 * **Formes Courantes :**
 
-* *À deux versants (Gable) :* Le plus simple et courant.
+	* *À deux versants (Gable) :* Le plus simple et courant.
 
-* *En croupe (Hip) :* Quatre versants inclinés.
+	* *En croupe (Hip) :* Quatre versants inclinés.
 
-* *Mansardé (Mansard) :* Double pente sur chaque côté (origine française).
+	* *Mansardé (Mansard) :* Double pente sur chaque côté (origine française).
 
-* *Plat (Flat) :* Climats arides, architecture moderne.
+	* *Plat (Flat) :* Climats arides, architecture moderne.
 
-* *À l'impériale, en dôme, etc. :* Formes plus spécifiques.
+	* *À l'impériale, en dôme, etc. :* Formes plus spécifiques.
 
 * **Matériaux de Couverture :**
 
-* *Tuiles en terre cuite :* Forme (canal/romane - Sud Europe ; plate - Nord Europe) et couleur (rouge, orange, marron...) varient.
+	* *Tuiles en terre cuite :* Forme (canal/romane - Sud Europe ; plate - Nord Europe) et couleur (rouge, orange, marron...) varient.
 
-* *Ardoise :* Gris foncé/noir, souvent en Europe de l'Ouest (France, UK, Belgique, Espagne...).
+	* *Ardoise :* Gris foncé/noir, souvent en Europe de l'Ouest (France, UK, Belgique, Espagne...).
 
-* *Bardeaux d'asphalte (Asphalt shingles) :* Extrêmement courant en Amérique du Nord, aspect granuleux, couleurs variées.
+	* *Bardeaux d'asphalte (Asphalt shingles) :* Extrêmement courant en Amérique du Nord, aspect granuleux, couleurs variées.
 
-* *Tôle Métallique :* Ondulée ou à joint debout, couleurs variées (courant en milieu rural, tropical, ou architecture moderne).
+	* *Tôle Métallique :* Ondulée ou à joint debout, couleurs variées (courant en milieu rural, tropical, ou architecture moderne).
 
-* *Bois (Bardeaux / Shakes) :* Amérique du Nord, Scandinavie.
+	* *Bois (Bardeaux / Shakes) :* Amérique du Nord, Scandinavie.
 
-* *Chaume (Thatch) :* Très localisé (Normandie, UK, Irlande, Pays-Bas...).
+	* *Chaume (Thatch) :* Très localisé (Normandie, UK, Irlande, Pays-Bas...).
 
   
-
+---
 ## 5. Fenêtres et Portes
 
   
@@ -144,16 +144,16 @@ L'architecture des bâtiments est un puissant indicateur géographique. Les styl
 
 * **Volets :**
 
-* *Type :* Battants, roulants, persiennes.
+	* *Type :* Battants, roulants, persiennes.
 
-* *Matériau :* Bois, métal, PVC.
+	* *Matériau :* Bois, métal, PVC.
 
-* *Fonction :* Fonctionnels (protection solaire/sécurité) ou purement décoratifs. Très courants en Europe du Sud, moins en Europe du Nord ou Amérique du Nord (sauf style).
+	* *Fonction :* Fonctionnels (protection solaire/sécurité) ou purement décoratifs. Très courants en Europe du Sud, moins en Europe du Nord ou Amérique du Nord (sauf style).
 
 * **Portes :** Style (classique, moderne), matériau (bois, métal, PVC), présence d'impostes vitrées au-dessus ou de fenêtres latérales.
 
   
-
+---
 ## 6. Caractéristiques Spécifiques Notables
 
   
@@ -171,7 +171,7 @@ L'architecture des bâtiments est un puissant indicateur géographique. Les styl
 * **Escaliers de Secours Extérieurs :** En métal, typiques des façades d'immeubles anciens dans les villes nord-américaines (New York, Chicago...).
 
   
-
+---
 ## 7. Disposition et Contexte Urbain/Rural
 
   
@@ -183,7 +183,7 @@ L'architecture des bâtiments est un puissant indicateur géographique. Les styl
 * **Style Rural :** Fermes (longères, mas, ranchs...), granges (style "barn" américain vs granges européennes), dépendances.
 
   
-
+---
 ## 8. Influences Historiques et Styles Marquants
 
   
@@ -199,7 +199,7 @@ L'architecture des bâtiments est un puissant indicateur géographique. Les styl
 * **Styles Traditionnels Locaux :** Pagodes (Asie de l'Est), maisons en bois scandinaves (couleur rouge Falun typique), Riad (Maroc)...
 
   
-
+---
 ## 9. Application OSINT
 
   

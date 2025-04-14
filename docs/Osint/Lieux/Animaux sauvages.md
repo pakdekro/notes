@@ -5,7 +5,7 @@
 L'observation d'animaux sauvages dans leur habitat naturel peut fournir des indices cruciaux sur le continent, le pays, voire l'écosystème spécifique (forêt, savane, désert, montagne...). Certains animaux ont une aire de répartition très limitée, ce qui en fait d'excellents marqueurs géographiques. Cependant, l'identification doit être précise et il faut tenir compte de la rareté des observations, des espèces introduites et de la possible confusion avec des animaux domestiques.
 
   
-
+---
 ## 1. Éléments Clés à Analyser
 
   
@@ -19,57 +19,56 @@ L'observation d'animaux sauvages dans leur habitat naturel peut fournir des indi
 * **Signes Indirects :** Traces, empreintes, déjections, nids (plus difficiles à exploiter en OSINT classique, mais peuvent être utiles dans des enquêtes spécifiques).
 
   
-
+---
 ## 2. Mammifères Indicateurs (Exemples par Région)
 
   
 
 * **Afrique :**
+	* *Grands Herbivores :* Éléphant d'Afrique (grandes oreilles), Girafe, Zèbre (motifs des rayures varient légèrement), Gnou, diverses Antilopes (Springbok, Impala, Koudou...), Rhinocéros (blanc/noir), Hippopotame.
 
-* *Grands Herbivores :* Éléphant d'Afrique (grandes oreilles), Girafe, Zèbre (motifs des rayures varient légèrement), Gnou, diverses Antilopes (Springbok, Impala, Koudou...), Rhinocéros (blanc/noir), Hippopotame.
+	* *Grands Carnivores :* Lion, Léopard, Guépard, Hyène.
 
-* *Grands Carnivores :* Lion, Léopard, Guépard, Hyène.
-
-* *Primates :* Babouins, Vervets, Lémuriens (uniquement à Madagascar !). 
+	* *Primates :* Babouins, Vervets, Lémuriens (uniquement à Madagascar !). 
 
 * **Australie :**
 
-* *Marsupiaux :* Kangourou (différentes espèces/tailles), Wallaby, Koala, Wombat. Très forts indicateurs. 
+	* *Marsupiaux :* Kangourou (différentes espèces/tailles), Wallaby, Koala, Wombat. Très forts indicateurs. 
 
-* *Autres :* Dingo (chien sauvage), Émeu (grand oiseau incapable de voler).
+	* *Autres :* Dingo (chien sauvage), Émeu (grand oiseau incapable de voler).
 
 * **Amérique du Nord :**
 
-* *Grands Herbivores :* Bison d'Amérique, Orignal (Moose - très grands bois plats), Wapiti (Elk), Cerf de Virginie (White-tailed deer), Cerf Mulet (Mule deer). 
+	* *Grands Herbivores :* Bison d'Amérique, Orignal (Moose - très grands bois plats), Wapiti (Elk), Cerf de Virginie (White-tailed deer), Cerf Mulet (Mule deer). 
 
-* *Ours :* Ours Noir, Grizzly/Ours Brun (bosse sur les épaules).
+	* *Ours :* Ours Noir, Grizzly/Ours Brun (bosse sur les épaules).
 
-* *Autres :* Raton laveur, Coyote, Chien de prairie, Tatou (Sud USA), Écureuils (espèces varient).
+	* *Autres :* Raton laveur, Coyote, Chien de prairie, Tatou (Sud USA), Écureuils (espèces varient).
 
 * **Amérique du Sud :**
 
-* *Camélidés Andins :* Lama, Alpaga (souvent domestiqués), Vigogne, Guanaco (sauvages). 
+	* *Camélidés Andins :* Lama, Alpaga (souvent domestiqués), Vigogne, Guanaco (sauvages). 
 
-* *Autres :* Capybara (plus gros rongeur du monde), Singes du Nouveau Monde (petits, souvent queue préhensile), Paresseux, Fourmilier, Jaguar (très rare à voir). 
+	* *Autres :* Capybara (plus gros rongeur du monde), Singes du Nouveau Monde (petits, souvent queue préhensile), Paresseux, Fourmilier, Jaguar (très rare à voir). 
 
 * **Asie :**
 
-* *Grands Mammifères :* Éléphant d'Asie (oreilles plus petites que l'africain), Tigre (très rare à voir), Léopard, Rhinocéros d'Asie.
+	* *Grands Mammifères :* Éléphant d'Asie (oreilles plus petites que l'africain), Tigre (très rare à voir), Léopard, Rhinocéros d'Asie.
 
-* *Primates :* Macaques (très répandus), Langurs, Orangs-outans (Bornéo/Sumatra).
+	* *Primates :* Macaques (très répandus), Langurs, Orangs-outans (Bornéo/Sumatra).
 
-* *Autres :* Cerfs (Sika, Axis...), Chameau de Bactriane (2 bosses, Asie Centrale), Dromadaire (1 bosse, Moyen-Orient/Afrique du Nord - souvent domestiqué), Panda Géant (Chine uniquement !). 
+	* *Autres :* Cerfs (Sika, Axis...), Chameau de Bactriane (2 bosses, Asie Centrale), Dromadaire (1 bosse, Moyen-Orient/Afrique du Nord - souvent domestiqué), Panda Géant (Chine uniquement !). 
 
 * **Europe :**
 
-* *Herbivores :* Cerf élaphe, Chevreuil, Daim, Sanglier, Chamois/Isard/Bouquetin (montagnes), Renne/Caribou (Scandinavie, Russie). 
+	* *Herbivores :* Cerf élaphe, Chevreuil, Daim, Sanglier, Chamois/Isard/Bouquetin (montagnes), Renne/Caribou (Scandinavie, Russie). 
 
-* *Carnivores :* Renard roux, Loup gris (rare), Ours brun (rare), Lynx.
+	* *Carnivores :* Renard roux, Loup gris (rare), Ours brun (rare), Lynx.
 
-* *Moins de grands mammifères facilement visibles* comparativement à d'autres continents.
+	* *Moins de grands mammifères facilement visibles* comparativement à d'autres continents.
 
   
-
+---
 ## 3. Oiseaux Indicateurs
 
   
@@ -89,7 +88,7 @@ Les oiseaux peuvent être plus difficiles à identifier, mais certains sont trè
 * **Oiseaux Marins :** Macareux (côtes Atlantique Nord), Albatros (océans austraux), Manchots/Pingouins (Hémisphère Sud uniquement !). 
 
   
-
+---
 ## 4. Reptiles et Amphibiens Indicateurs
 
   
@@ -105,7 +104,7 @@ Moins fréquemment visibles ou identifiables de loin, mais parfois utiles :
 * **Tortues :** Tortues terrestres géantes (Galápagos, Seychelles), tortues marines (plages de ponte spécifiques).
 
   
-
+---
 ## 5. Limites et Précautions
 
   
@@ -121,7 +120,7 @@ Moins fréquemment visibles ou identifiables de loin, mais parfois utiles :
 * **Parcs Animaliers / Zoos :** La présence d'animaux exotiques dans un enclos ne renseigne pas sur la faune locale environnante.
 
   
-
+---
 ## 6. Application OSINT
 
   

@@ -5,7 +5,7 @@
 Après le marquage au sol, les panneaux de signalisation constituent la deuxième source majeure d'indices visuels routiers pour la géolocalisation. Comme pour le marquage, la Convention de Vienne sur la signalisation routière (1968) a établi des standards, mais de très nombreux pays (y compris les USA, Canada, Australie) ne l'appliquent pas ou seulement partiellement, et même les pays signataires ont des variations nationales. Analyser les panneaux est donc essentiel en OSINT.
 
   
-
+---
 ## 1. Éléments Clés à Analyser
 
   
@@ -18,21 +18,21 @@ Après le marquage au sol, les panneaux de signalisation constituent la deuxièm
 
 * **Texte :**
 
-* Langue(s) utilisée(s).
+	* Langue(s) utilisée(s).
 
-* Police de caractères (font).
+	* Police de caractères (font).
 
-* Abréviations, termes spécifiques.
+	* Abréviations, termes spécifiques.
 
 * **Montage et Dos du Panneau :**
 
-* Type de poteau (matériau, forme, couleur).
+	* Type de poteau (matériau, forme, couleur).
 
-* Système de fixation.
+	* Système de fixation.
 
-* Couleur du dos du panneau (souvent gris, mais pas toujours).
+	* Couleur du dos du panneau (souvent gris, mais pas toujours).
 
-* Étiquettes ou marquages au dos (inventaire, date, fabricant).
+	* Étiquettes ou marquages au dos (inventaire, date, fabricant).
 
 * **Unités de Mesure :** Distances en kilomètres (km) ou miles (m) ? Limitations de vitesse ? Hauteurs/largeurs en mètres ou pieds/pouces ?
 
@@ -44,50 +44,50 @@ Après le marquage au sol, les panneaux de signalisation constituent la deuxièm
 
 * **Triangle (Pointe en Haut) :**
 
-* **Usage :** Très répandu en Europe, Afrique, Asie (influence Convention de Vienne).
+	* **Usage :** Très répandu en Europe, Afrique, Asie (influence Convention de Vienne).
 
-* **Signification :** Danger / Avertissement. Le symbole à l'intérieur précise le danger.
+	* **Signification :** Danger / Avertissement. Le symbole à l'intérieur précise le danger.
 
 * **Triangle (Pointe en Bas) :**
 
-* **Usage :** Quasi universel.
+	* **Usage :** Quasi universel.
 
-* **Signification :** Cédez le passage / Yield.
+	* **Signification :** Cédez le passage / Yield.
 
 * **Cercle :**
 
-* **Usage :** Très répandu en Europe, Afrique, Asie (influence Convention de Vienne).
+	* **Usage :** Très répandu en Europe, Afrique, Asie (influence Convention de Vienne).
 
-* **Signification :** Réglementation.
+	* **Signification :** Réglementation.
 
-* *Bordure Rouge :* Interdiction (ex: limitation de vitesse, sens interdit, interdiction de dépasser).
+		* *Bordure Rouge :* Interdiction (ex: limitation de vitesse, sens interdit, interdiction de dépasser).
 
-* *Fond Bleu :* Obligation (ex: direction obligatoire, piste cyclable obligatoire, vitesse minimale).
+		* *Fond Bleu :* Obligation (ex: direction obligatoire, piste cyclable obligatoire, vitesse minimale).
 
-* *Fond Blanc/Jaune avec Barre Diagonale :* Fin d'interdiction ou de prescription.
+		* *Fond Blanc/Jaune avec Barre Diagonale :* Fin d'interdiction ou de prescription.
 
 * **Octogone :**
 
-* **Usage :** Quasi universel.
+	* **Usage :** Quasi universel.
 
-* **Signification :** Arrêt obligatoire / STOP. La couleur (rouge) est constante, mais le texte peut varier ("STOP" est le plus courant, mais pas exclusif).
+	* **Signification :** Arrêt obligatoire / STOP. La couleur (rouge) est constante, mais le texte peut varier ("STOP" est le plus courant, mais pas exclusif).
 
 * **Losange (Diamond) :**
 
-* **Usage :** USA, Canada, Irlande, Australie, Nouvelle-Zélande, Japon...
+	* **Usage :** USA, Canada, Irlande, Australie, Nouvelle-Zélande, Japon...
 
-* **Signification :** Danger / Avertissement (souvent sur fond jaune).
+	* **Signification :** Danger / Avertissement (souvent sur fond jaune).
 
-* **Usage (Europe) :** Peut aussi indiquer une route prioritaire (sur fond blanc/jaune, ex: Allemagne, France).
+	* **Usage (Europe) :** Peut aussi indiquer une route prioritaire (sur fond blanc/jaune, ex: Allemagne, France).
 
 * **Carré / Rectangle :**
 
-* **Usage :** Universel.
+	* **Usage :** Universel.
 
-* **Signification :** Information, Direction, Services. Les couleurs varient énormément selon le pays et le type de route (voir section couleurs).
+	* **Signification :** Information, Direction, Services. Les couleurs varient énormément selon le pays et le type de route (voir section couleurs).
 
   
-
+---
 ## 3. Le Code Couleur des Fonds
 
   
@@ -96,54 +96,54 @@ Après le marquage au sol, les panneaux de signalisation constituent la deuxièm
 
 * **Jaune :**
 
-* *Avertissement/Danger :* USA, Canada, Australie, NZ, Irlande, Japon...
+	* *Avertissement/Danger :* USA, Canada, Australie, NZ, Irlande, Japon...
 
-* *Marquage Temporaire/Travaux :* Souvent en Europe (même pour les panneaux de danger habituellement blancs).
+	* *Marquage Temporaire/Travaux :* Souvent en Europe (même pour les panneaux de danger habituellement blancs).
 
-* *Route Prioritaire :* Parfois (ex: Allemagne).
+	* *Route Prioritaire :* Parfois (ex: Allemagne).
 
-* *Direction :* Routes secondaires dans certains pays.
+	* *Direction :* Routes secondaires dans certains pays.
 
 * **Blanc :**
 
-* *Fond pour Réglementation/Interdiction :* Souvent en Europe (avec bordure rouge).
+	* *Fond pour Réglementation/Interdiction :* Souvent en Europe (avec bordure rouge).
 
-* *Fond pour Information Locale :* Noms de rue, informations diverses.
+	* *Fond pour Information Locale :* Noms de rue, informations diverses.
 
-* *Limitations de Vitesse :* USA (rectangulaire), certains pays européens (cercle).
+	* *Limitations de Vitesse :* USA (rectangulaire), certains pays européens (cercle).
 
 * **Bleu :**
 
-* *Obligation :* Europe (cercle).
+	* *Obligation :* Europe (cercle).
 
-* *Direction (Autoroutes) :* France, Allemagne, Italie, Espagne, Suisse, Belgique...
+	* *Direction (Autoroutes) :* France, Allemagne, Italie, Espagne, Suisse, Belgique...
 
-* *Direction (Autres Routes) :* Certains pays.
+	* *Direction (Autres Routes) :* Certains pays.
 
-* *Information / Services :* Très courant.
+	* *Information / Services :* Très courant.
 
 * **Vert :**
 
-* *Direction (Autoroutes) :* UK, Irlande, Scandinavie, Grèce, Pologne, certains pays d'Asie...
+	* *Direction (Autoroutes) :* UK, Irlande, Scandinavie, Grèce, Pologne, certains pays d'Asie...
 
-* *Direction (Routes Principales) :* USA, Canada, Australie...
+	* *Direction (Routes Principales) :* USA, Canada, Australie...
 
-* *Direction (Autres Routes) :* France, Italie, Suisse...
+	* *Direction (Autres Routes) :* France, Italie, Suisse...
 
 * **Marron :**
 
-* **Usage :** Assez universel.
+	* **Usage :** Assez universel.
 
-* **Signification :** Indication touristique, points d'intérêt culturel ou naturel.
+	* **Signification :** Indication touristique, points d'intérêt culturel ou naturel.
 
 * **Orange :**
 
-* **Usage :** Principalement USA, Canada.
+	* **Usage :** Principalement USA, Canada.
 
-* **Signification :** Travaux / Construction / Zone temporaire.
+	* **Signification :** Travaux / Construction / Zone temporaire.
 
   
-
+---
 ## 4. Symboles et Pictogrammes
 
   
@@ -166,24 +166,24 @@ Même si la Convention de Vienne standardise de nombreux symboles (silhouette de
 
 * **Police de Caractères (Font) :** Très distinctif !
 
-* *USA :* Highway Gothic (ancien) / Clearview (plus récent).
+	* *USA :* Highway Gothic (ancien) / Clearview (plus récent).
 
-* *Allemagne :* DIN 1451.
+	* *Allemagne :* DIN 1451.
 
-* *France :* Caractères (L1 à L5).
+	* *France :* Caractères (L1 à L5).
 
-* *UK :* Transport.
+	* *UK :* Transport.
 
-* *Italie :* Alfabeto Normale / Alfabeto Stretto.
+	* *Italie :* Alfabeto Normale / Alfabeto Stretto.
 
-* *Suède :* Tratex.
+	* *Suède :* Tratex.
 
 * La reconnaissance de la police peut suffire à identifier un pays.
 
 * **Terminologie / Abréviations :** "Exit" vs "Sortie" vs "Ausfahrt" ; "km/h" vs "MPH" ; "Centre Ville" vs "Downtown" vs "Zentrum".
 
   
-
+---
 ## 6. Montage et Dos du Panneau
 
   
@@ -193,7 +193,7 @@ Même si la Convention de Vienne standardise de nombreux symboles (silhouette de
 * **Dos du Panneau :** Généralement gris, mais peut être d'une autre couleur. Présence d'autocollants (codes-barres, dates, logos de la municipalité ou de l'agence routière) ?
 
   
-
+---
 ## 7. Exemples de Systèmes Distinctifs
 
   
@@ -205,7 +205,7 @@ Même si la Convention de Vienne standardise de nombreux symboles (silhouette de
 * **Système Britannique/Irlandais :** Mixte. Formes européennes mais couleurs parfois différentes (ex: directions primaires vertes au UK). Unités impériales (UK) vs métriques (Irlande). Polices spécifiques. Conduite à gauche.
 
   
-
+---
 ## 8. Application OSINT
 
   
